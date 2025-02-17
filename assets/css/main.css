@@ -19,22 +19,22 @@
   
   /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
   :root { 
-    --background-color: #000000; /* Background color for the entire website, including individual sections */
-    --default-color: #fafafa; /* Default color used for the majority of the text content across the entire website */
+    --background-color: #1a1a2e; /* Background color for the entire website, including individual sections */
+    --default-color: #e0e0e0; /* Default color used for the majority of the text content across the entire website */
     --heading-color: #ffffff; /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #18d26e; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-    --surface-color: #1a1a1a; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --accent-color: #e94560; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #161213e; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
     --contrast-color: #000000; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
   }
   
   /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
   :root {
-    --nav-color: #fafafa;  /* The default color of the main navmenu links */
-    --nav-hover-color: #18d26e; /* Applied to main navmenu links when they are hovered over or active */
-    --nav-mobile-background-color: #1a1a1a; /* Used as the background color for mobile navigation menu */
-    --nav-dropdown-background-color: #1a1a1a; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-    --nav-dropdown-color: #fafafa; /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #18d26e; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+    --nav-color: #e0e0e0;  /* The default color of the main navmenu links */
+    --nav-hover-color: #e94560; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #16213e; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #16213e; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #e0e0e0; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #e94560; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
   }
   
   /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -1474,3 +1474,49 @@
   .contact .php-email-form button[type=submit]:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
   }
+
+  .animation-container {
+    width: 50%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(1.2);
+    will-change: transform;
+    margin-left: auto;
+    top: 0;
+    right: 0;
+    width: 50;
+}
+
+.glow-container {
+    position: relative;
+    width: 600px;
+    height: 600px;
+}
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(30, 237, 23,) 0%, rgba(0, 255, 255, 0) 80%);
+    border-radius: 50%;
+    animation: moveGlow 6s infinite alternate ease-in-out;
+    filter: blur(90px);
+    opacity: 0.8;
+}
+.glow:nth-child(2) {
+    background: radial-gradient(circle, rgba(255, 0, 255, 0.9) 0%, rgba(255, 0, 255, 0) 80%);
+    animation-duration: 12s;
+}
+.glow:nth-child(3) {
+    background: radial-gradient(circle, rgba(255, 255, 0, 0.9) 0%, rgba(255, 255, 0, 0) 80%);
+    animation-duration: 18s;
+}
+@keyframes moveGlow {
+    100% {
+        transform: translate(-120px, -120px) scale(1.2);
+    }
+    0% {
+        transform: translate(220px, 220px) scale(1.7);
+    }
+}
