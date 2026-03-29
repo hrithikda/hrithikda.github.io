@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>CareSight-Hospital Readmission Prediction</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>CareSight — Hospital Readmission Prediction</title>
+  <meta name="description" content="CareSight: ML models using XGBoost and neural networks to predict hospital readmission rates, with interactive SHAP-based dashboards for healthcare administrators.">
+  <meta name="keywords" content="machine learning, healthcare, XGBoost, SHAP, hospital readmission, Python, Tableau">
 
   <!-- Favicons -->
   <link href="assets/img/favicon3.png" rel="icon">
@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,9 +35,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">HR Dashboard</h1>
+        <h1 class="sitename">HDA</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -45,25 +43,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
-          <li><a href="portfolio.html">Projects</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
+          <li><a href="portfolio.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -77,20 +57,21 @@
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
       <div class="heading">
-        <!-- <div class="container">
+        <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>Portfolio Details</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
+              <h1>CareSight</h1>
+              <p class="mb-0">Hospital Readmission Prediction &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Healthcare Analytics</p>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li class="current">CareSight</li>
           </ol>
         </div>
       </nav>
@@ -110,28 +91,19 @@
                 {
                   "loop": true,
                   "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
+                  "autoplay": { "delay": 5000 },
                   "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
+                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
                 }
               </script>
 
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/HR1.jpg" alt="">
+                  <img src="assets/img/portfolio/HR1.jpg" alt="CareSight Dashboard">
                 </div>
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/HR2.jpg" alt="">
+                  <img src="assets/img/portfolio/HR2.jpg" alt="CareSight SHAP Analysis">
                 </div>
-
               </div>
               <div class="swiper-pagination"></div>
             </div>
@@ -139,20 +111,27 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
-              <h3>Project information</h3>
+              <h3>Project Info</h3>
               <ul>
-                <li><strong>Category</strong>: Hospital Readmission Prediction
-                </li>
-                <li><strong>Project URL</strong>: <a href="https://github.com/hrithikda/Hospital-Readmission-Prediction" target="_blank">Click here for GitHub Repo</a></li>
+                <li><strong>Domain:</strong> Healthcare / Machine Learning</li>
+                <li><strong>Stack:</strong> Python, XGBoost, Neural Networks, SHAP, Tableau</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/Hospital-Readmission-Prediction" target="_blank">View Repository</a></li>
               </ul>
             </div>
+
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <!-- <h2></h2> -->
-              <p>
-                <li>Developed robust machine learning models using regression, XGBoost, and neural networks to predict excess hospital readmission rates, reducing potential penalties and guiding quality improvements in patient care.</li><br>
-                <li>Engineered interactive, filterable dashboards featuring key performance metrics and SHAP-based feature insights, enabling healthcare administrators to monitor trends and make data-driven decisions.</li><br> 
-                <li>Provided actionable visualizations and in-depth analysis on patient discharge volumes, predicted versus expected readmission rates, and other critical factors, significantly optimizing clinical strategies and operational efficiency.</li>
-              </p>
+              <h2>The Problem</h2>
+              <p>Hospitals face CMS penalties when patients are readmitted within 30 days — a costly and largely preventable outcome. Administrators needed a data-driven way to identify high-risk patients before discharge.</p>
+
+              <h2>What I Built</h2>
+              <ul>
+                <li>Trained regression, XGBoost, and neural network models to predict excess readmission rates with measurable accuracy</li>
+                <li>Built interactive dashboards with SHAP-based feature importance to explain model decisions to non-technical stakeholders</li>
+                <li>Delivered visualizations on discharge volumes, predicted vs. expected readmission trends, and key clinical factors</li>
+              </ul>
+
+              <h2>Impact</h2>
+              <p>Enabled healthcare administrators to pinpoint quality gaps, redirect clinical resources, and reduce potential penalty exposure through actionable, interpretable predictions.</p>
             </div>
           </div>
 
@@ -163,8 +142,6 @@
     </section><!-- /Portfolio Details Section -->
 
   </main>
-
- 
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
