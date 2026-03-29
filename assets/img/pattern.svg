@@ -1,0 +1,251 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500">
+
+  <!-- === CHAOTIC TECH WALLPAPER — 30 icons, no grid, all scattered === -->
+
+  <!-- 1. Database cylinder -->
+  <g transform="translate(42,32) rotate(-12)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <ellipse cx="0" cy="0" rx="13" ry="4"/>
+    <line x1="-13" y1="0" x2="-13" y2="18"/>
+    <line x1="13" y1="0" x2="13" y2="18"/>
+    <ellipse cx="0" cy="18" rx="13" ry="4"/>
+    <path d="M-13,9 Q0,13 13,9"/>
+  </g>
+
+  <!-- 2. Exclamation ! -->
+  <g transform="translate(178,58) rotate(28)">
+    <text font-family="Georgia,serif" font-size="26" fill="white" text-anchor="middle" font-weight="bold">!</text>
+  </g>
+
+  <!-- 3. Star -->
+  <g transform="translate(262,22) rotate(20)" stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round">
+    <polygon points="0,-13 3.5,-4.5 13,-4.5 5.5,1.5 8,11 0,5.5 -8,11 -5.5,1.5 -13,-4.5 -3.5,-4.5"/>
+  </g>
+
+  <!-- 4. Neural network (simplified 3-layer) -->
+  <g transform="translate(365,45) rotate(-7)" stroke="white" stroke-width="1" fill="none">
+    <circle cx="-14" cy="-9" r="3.5"/><circle cx="-14" cy="9" r="3.5"/>
+    <circle cx="0" cy="0" r="3.5"/>
+    <circle cx="14" cy="-9" r="3.5"/><circle cx="14" cy="9" r="3.5"/>
+    <line x1="-10.5" y1="-9" x2="-3.5" y2="0"/><line x1="-10.5" y1="9" x2="-3.5" y2="0"/>
+    <line x1="3.5" y1="0" x2="10.5" y2="-9"/><line x1="3.5" y1="0" x2="10.5" y2="9"/>
+  </g>
+
+  <!-- 5. Gear -->
+  <g transform="translate(455,68) rotate(-25)" stroke="white" stroke-width="1.2" fill="none">
+    <circle cx="0" cy="0" r="5.5"/>
+    <line x1="0" y1="-9" x2="0" y2="-14"/><line x1="0" y1="9" x2="0" y2="14"/>
+    <line x1="-9" y1="0" x2="-14" y2="0"/><line x1="9" y1="0" x2="14" y2="0"/>
+    <line x1="-6.5" y1="-6.5" x2="-10" y2="-10"/><line x1="6.5" y1="-6.5" x2="10" y2="-10"/>
+    <line x1="-6.5" y1="6.5" x2="-10" y2="10"/><line x1="6.5" y1="6.5" x2="10" y2="10"/>
+  </g>
+
+  <!-- 6. Bar chart -->
+  <g transform="translate(22,128) rotate(-18)" stroke="white" stroke-width="1.3" fill="none" stroke-linecap="round">
+    <line x1="-18" y1="14" x2="20" y2="14"/>
+    <rect x="-15" y="4" width="8" height="10" rx="1"/>
+    <rect x="-3" y="-4" width="8" height="18" rx="1"/>
+    <rect x="9" y="-10" width="8" height="24" rx="1"/>
+  </g>
+
+  <!-- 7. </> code tag -->
+  <g transform="translate(152,97) rotate(10)">
+    <text font-family="'Courier New',monospace" font-size="17" fill="white" stroke="none" text-anchor="middle">&lt;/&gt;</text>
+  </g>
+
+  <!-- 8. Lambda λ -->
+  <g transform="translate(308,130) rotate(22)">
+    <text font-family="Georgia,serif" font-size="28" fill="white" stroke="none" text-anchor="middle">λ</text>
+  </g>
+
+  <!-- 9. Hash # -->
+  <g transform="translate(405,108) rotate(-38)">
+    <text font-family="'Courier New',monospace" font-size="22" fill="white" stroke="none" text-anchor="middle">#</text>
+  </g>
+
+  <!-- 10. Paper airplane -->
+  <g transform="translate(112,172) rotate(42)" stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round">
+    <path d="M-12,8 L14,-2 L-12,-8 L-5,0 Z"/>
+    <line x1="-5" y1="0" x2="14" y2="-2"/>
+  </g>
+
+  <!-- 11. Cloud -->
+  <g transform="translate(68,238) rotate(8)" stroke="white" stroke-width="1.3" fill="none" stroke-linejoin="round">
+    <path d="M-16,9 Q-24,9 -24,0 Q-24,-9 -15,-11 Q-13,-20 -2,-20 Q9,-20 11,-11 Q20,-11 20,0 Q20,9 10,9 Z"/>
+  </g>
+
+  <!-- 12. Graph network nodes -->
+  <g transform="translate(205,215) rotate(17)" stroke="white" stroke-width="1" fill="none">
+    <circle cx="-11" cy="-9" r="3.5"/><circle cx="11" cy="-9" r="3.5"/>
+    <circle cx="11" cy="9" r="3.5"/><circle cx="-11" cy="9" r="3.5"/>
+    <line x1="-7.5" y1="-9" x2="7.5" y2="-9"/>
+    <line x1="11" y1="-5.5" x2="11" y2="5.5"/>
+    <line x1="-7.5" y1="9" x2="7.5" y2="9"/>
+    <line x1="-11" y1="-5.5" x2="11" y2="5.5"/>
+  </g>
+
+  <!-- 13. WiFi signal -->
+  <g transform="translate(335,190) rotate(-12)" stroke="white" stroke-width="1.3" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="8" r="2" fill="white"/>
+    <path d="M-7,3 Q0,-3 7,3"/>
+    <path d="M-14,-2 Q0,-12 14,-2"/>
+  </g>
+
+  <!-- 14. Magnifying glass -->
+  <g transform="translate(450,218) rotate(15)" stroke="white" stroke-width="1.3" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="-3" r="10"/>
+    <line x1="7" y1="5" x2="15" y2="13"/>
+  </g>
+
+  <!-- 15. ? question mark -->
+  <g transform="translate(40,310) rotate(-20)">
+    <text font-family="Georgia,serif" font-size="30" fill="white" stroke="none" text-anchor="middle" font-weight="bold">?</text>
+  </g>
+
+  <!-- 16. Terminal window >_ -->
+  <g transform="translate(158,278) rotate(28)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="-18" y="-12" width="36" height="26" rx="3"/>
+    <polyline points="-11,-4 -4,2 -11,8"/>
+    <line x1="-1" y1="8" x2="12" y2="8"/>
+  </g>
+
+  <!-- 17. Puzzle piece -->
+  <g transform="translate(278,315) rotate(-15)" stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round">
+    <path d="M-13,-13 L-3,-13 Q-3,-19 2,-19 Q7,-19 7,-13 L13,-13 L13,-3 Q19,-3 19,2 Q19,7 13,7 L13,13 L-13,13 L-13,7 Q-19,7 -19,2 Q-19,-3 -13,-3 Z"/>
+  </g>
+
+  <!-- 18. Coffee cup with steam -->
+  <g transform="translate(408,288) rotate(12)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <rect x="-10" y="-4" width="20" height="18" rx="2"/>
+    <path d="M10,2 Q18,2 18,8 Q18,14 10,14"/>
+    <path d="M-5,-8 Q-3,-15 -1,-8"/>
+    <path d="M3,-9 Q5,-16 7,-9"/>
+  </g>
+
+  <!-- 19. { } braces -->
+  <g transform="translate(468,338) rotate(-10)">
+    <text font-family="'Courier New',monospace" font-size="20" fill="white" stroke="none" text-anchor="middle">{ }</text>
+  </g>
+
+  <!-- 20. Light bulb with rays -->
+  <g transform="translate(22,398) rotate(-28)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <circle cx="0" cy="-4" r="9"/>
+    <line x1="-4" y1="5" x2="-4" y2="11"/>
+    <line x1="4" y1="5" x2="4" y2="11"/>
+    <line x1="-4" y1="11" x2="4" y2="11"/>
+    <line x1="0" y1="-13" x2="0" y2="-18"/><line x1="11" y1="-9" x2="15" y2="-13"/>
+    <line x1="-11" y1="-9" x2="-15" y2="-13"/>
+    <line x1="12" y1="0" x2="17" y2="0"/>
+    <line x1="-12" y1="0" x2="-17" y2="0"/>
+  </g>
+
+  <!-- 21. Py text -->
+  <g transform="translate(132,372) rotate(22)">
+    <text font-family="'Courier New',monospace" font-size="15" fill="white" stroke="none" text-anchor="middle" font-weight="bold">Py</text>
+  </g>
+
+  <!-- 22. Bug with legs and antennae -->
+  <g transform="translate(255,388) rotate(-30)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <ellipse cx="0" cy="0" rx="8" ry="12"/>
+    <line x1="-8" y1="-6" x2="-15" y2="-11"/>
+    <line x1="8" y1="-6" x2="15" y2="-11"/>
+    <line x1="-8" y1="0" x2="-16" y2="0"/>
+    <line x1="8" y1="0" x2="16" y2="0"/>
+    <line x1="-8" y1="6" x2="-15" y2="11"/>
+    <line x1="8" y1="6" x2="15" y2="11"/>
+    <line x1="-4" y1="-12" x2="-7" y2="-19"/>
+    <line x1="4" y1="-12" x2="7" y2="-19"/>
+    <circle cx="-7" cy="-19" r="2"/><circle cx="7" cy="-19" r="2"/>
+  </g>
+
+  <!-- 23. Rubber duck (debugging!) -->
+  <g transform="translate(358,352) rotate(-5)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-4,-10 Q-8,-12 -8,-8 Q-8,-4 -2,-4 L-2,-10 Q-2,-14 2,-14 Q6,-14 6,-10 Q6,-6 4,-4"/>
+    <path d="M-2,-4 Q-10,2 -10,8 Q-10,14 0,14 Q10,14 10,8 Q10,2 4,-4"/>
+    <circle cx="0" cy="-9" r="1.5" fill="white"/>
+    <line x1="4" y1="-12" x2="8" y2="-13"/>
+  </g>
+
+  <!-- 24. Pi π -->
+  <g transform="translate(458,392) rotate(-15)">
+    <text font-family="Georgia,serif" font-size="24" fill="white" stroke="none" text-anchor="middle">π</text>
+  </g>
+
+  <!-- 25. Infinity ∞ -->
+  <g transform="translate(58,462) rotate(18)">
+    <text font-family="Georgia,serif" font-size="26" fill="white" stroke="none" text-anchor="middle">∞</text>
+  </g>
+
+  <!-- 26. Git branch -->
+  <g transform="translate(172,442) rotate(-8)" stroke="white" stroke-width="1.3" fill="none">
+    <circle cx="0" cy="-12" r="5"/><circle cx="0" cy="12" r="5"/>
+    <circle cx="16" cy="-2" r="5"/>
+    <line x1="0" y1="-7" x2="0" y2="7"/>
+    <path d="M0,-7 Q0,-2 16,-2" fill="none"/>
+  </g>
+
+  <!-- 27. SQL text -->
+  <g transform="translate(288,458) rotate(32)">
+    <text font-family="'Courier New',monospace" font-size="15" fill="white" stroke="none" text-anchor="middle" font-weight="bold">SQL</text>
+  </g>
+
+  <!-- 28. Sigma Σ -->
+  <g transform="translate(392,438) rotate(10)">
+    <text font-family="Georgia,serif" font-size="26" fill="white" stroke="none" text-anchor="middle">Σ</text>
+  </g>
+
+  <!-- 29. Binary 010 -->
+  <g transform="translate(460,460) rotate(-22)">
+    <text font-family="'Courier New',monospace" font-size="12" fill="white" stroke="none" text-anchor="middle">010</text>
+  </g>
+
+  <!-- 30. 404 (comical) -->
+  <g transform="translate(230,155) rotate(35)">
+    <text font-family="'Courier New',monospace" font-size="14" fill="white" stroke="none" text-anchor="middle" font-weight="bold">404</text>
+  </g>
+
+  <!-- 31. Hourglass / loading -->
+  <g transform="translate(480,140) rotate(-18)" stroke="white" stroke-width="1.2" fill="none" stroke-linecap="round">
+    <line x1="-8" y1="-14" x2="8" y2="-14"/>
+    <line x1="-8" y1="14" x2="8" y2="14"/>
+    <path d="M-6,-14 L-6,-8 L0,0 L-6,8 L-6,14"/>
+    <path d="M6,-14 L6,-8 L0,0 L6,8 L6,14"/>
+  </g>
+
+  <!-- 32. Cursor arrow -->
+  <g transform="translate(195,348) rotate(40)" stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round">
+    <path d="M0,-14 L0,8 L4,4 L9,12"/>
+    <path d="M0,-14 L8,6 L4,4"/>
+  </g>
+
+  <!-- 33. Brackets [ ] -->
+  <g transform="translate(340,420) rotate(-28)">
+    <text font-family="'Courier New',monospace" font-size="18" fill="white" stroke="none" text-anchor="middle">[ ]</text>
+  </g>
+
+  <!-- 34. Tiny scatter: @ symbol -->
+  <g transform="translate(95,55) rotate(15)">
+    <text font-family="'Courier New',monospace" font-size="16" fill="white" stroke="none" text-anchor="middle">@</text>
+  </g>
+
+  <!-- 35. Tiny scatter: pipe | -->
+  <g transform="translate(430,155) rotate(-45)">
+    <text font-family="'Courier New',monospace" font-size="20" fill="white" stroke="none" text-anchor="middle">|</text>
+  </g>
+
+  <!-- 36. Arrow → (data flow) -->
+  <g transform="translate(140,240) rotate(55)" stroke="white" stroke-width="1.3" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="-12" y1="0" x2="12" y2="0"/>
+    <polyline points="6,-5 12,0 6,5"/>
+  </g>
+
+  <!-- 37. Checkmark ✓ -->
+  <g transform="translate(320,258) rotate(-25)" stroke="white" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="-8,0 -3,6 8,-8"/>
+  </g>
+
+  <!-- 38. Loading dots ... -->
+  <g transform="translate(75,340) rotate(32)" fill="white">
+    <circle cx="-8" cy="0" r="2"/><circle cx="0" cy="0" r="2"/><circle cx="8" cy="0" r="2"/>
+  </g>
+
+</svg>

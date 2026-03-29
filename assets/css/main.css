@@ -1454,48 +1454,301 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 
-.animation-container {
-  width: 50%;
-  position: absolute;
+/*--------------------------------------------------------------
+# Hero Section — New Layout
+--------------------------------------------------------------*/
+.hero-content {
+  max-width: 680px;
+}
+
+.hero-eyebrow {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 8px;
+}
+
+.hero h2 {
+  margin: 0 0 8px 0;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-lastname {
+  font-weight: 300;
+  font-size: 52px;
+  opacity: 0.85;
+}
+
+.hero-role {
+  margin: 12px 0 0 0 !important;
+  font-size: 24px;
+  color: var(--default-color);
+}
+
+.hero-role .typed {
+  color: var(--accent-color);
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.hero-tagline {
+  margin: 10px 0 32px 0 !important;
+  font-size: 15px;
+  color: color-mix(in srgb, var(--default-color), transparent 35%);
+  letter-spacing: 0.5px;
+}
+
+.hero-cta-group {
   display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.btn-hero-primary {
+  display: inline-flex;
   align-items: center;
+  gap: 8px;
+  background-color: var(--accent-color);
+  color: #000;
+  font-family: var(--nav-font);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-primary:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.btn-hero-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: transparent;
+  color: var(--default-color);
+  font-family: var(--nav-font);
+  font-weight: 600;
+  font-size: 15px;
+  padding: 13px 28px;
+  border-radius: 50px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-hero-secondary:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 40px;
+  }
+  .hero-lastname {
+    font-size: 34px;
+  }
+  .hero-role {
+    font-size: 20px;
+  }
+  .btn-hero-primary,
+  .btn-hero-secondary {
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Header / Sitename
+--------------------------------------------------------------*/
+.header .logo h1.sitename {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+}
+
+/*--------------------------------------------------------------
+# Footer — Updated
+--------------------------------------------------------------*/
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-contact {
+  font-size: 16px;
+  font-style: normal !important;
+  margin: 0 !important;
+  color: var(--default-color);
+}
+
+.footer-email {
+  font-style: normal !important;
+  margin: 0 0 12px 0 !important;
+}
+
+.footer-email a {
+  color: var(--accent-color);
+  font-size: 15px;
+}
+
+.footer-copy {
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  margin: 8px 0 0 0 !important;
+  font-style: normal !important;
+}
+
+/*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+.about-profile-img {
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.about-subtitle {
+  font-size: 15px;
+  color: var(--accent-color);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+
+/*--------------------------------------------------------------
+# Resume Download Button
+--------------------------------------------------------------*/
+.btn-resume-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--accent-color);
+  color: #000;
+  font-family: var(--nav-font);
+  font-weight: 600;
+  font-size: 14px;
+  padding: 11px 26px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-resume-download:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+/*--------------------------------------------------------------
+# Portfolio Tags
+--------------------------------------------------------------*/
+.portfolio-tags {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   justify-content: center;
-  filter: brightness(1.2);
-  will-change: transform;
-  margin-left: auto;
+}
+
+.portfolio-tags span {
+  background: color-mix(in srgb, var(--accent-color), transparent 75%);
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
+# Site Wallpaper Pattern
+--------------------------------------------------------------*/
+.site-wallpaper {
+  position: fixed;
+  inset: 0;
+  background-image: url('../img/pattern.svg');
+  background-repeat: repeat;
+  background-size: 500px 500px;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/*--------------------------------------------------------------
+# Glow Animation — Refined
+--------------------------------------------------------------*/
+.animation-container {
+  position: fixed;
   top: 0;
   right: 0;
-  width: 50;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  pointer-events: none;
+  z-index: 0;
 }
 
 .glow-container {
-  position: relative;
-  width: 600px;
-  height: 600px;
+  position: absolute;
+  inset: 0;
+  /* Subtle ambient base so there are no dark gaps between blobs */
+  background: radial-gradient(ellipse 70% 80% at 80% 50%, rgba(24, 210, 110, 0.03) 0%, transparent 100%);
 }
+
 .glow {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(30, 237, 23,) 0%, rgba(0, 255, 255, 0) 80%);
   border-radius: 50%;
-  animation: moveGlow 6s infinite alternate ease-in-out;
-  filter: blur(90px);
-  opacity: 0.8;
+  filter: blur(110px);
+  opacity: 0.9;
+  will-change: transform;
 }
-.glow:nth-child(2) {
-  background: radial-gradient(circle, rgba(255, 0, 255, 0.9) 0%, rgba(255, 0, 255, 0) 80%);
-  animation-duration: 12s;
+
+/* Green blob */
+.glow:nth-child(1) {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(8, 80, 40, 0.55) 0%, rgba(8, 80, 40, 0) 75%);
+  bottom: -100px;
+  right: -60px;
 }
-.glow:nth-child(3) {
-  background: radial-gradient(circle, rgba(255, 255, 0, 0.9) 0%, rgba(255, 255, 0, 0) 80%);
-  animation-duration: 18s;
+
+/* Purple blob */
+.glow.glow-2 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(30, 10, 80, 0.60) 0%, rgba(30, 10, 80, 0) 75%);
+  top: -80px;
+  right: 40px;
 }
-@keyframes moveGlow {
-  100% {
-      transform: translate(-120px, -120px) scale(1.2);
-  }
-  0% {
-      transform: translate(220px, 220px) scale(1.7);
-  }
+
+/* Cyan blob */
+.glow.glow-3 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(0, 40, 70, 0.55) 0%, rgba(0, 40, 70, 0) 75%);
+  top: 50%;
+  right: 20%;
+  transform-origin: center center;
 }
