@@ -1499,3 +1499,173 @@ section,
       transform: translate(220px, 220px) scale(1.7);
   }
 }
+
+/*--------------------------------------------------------------
+# Project Cards (text-rich layout, no images required)
+--------------------------------------------------------------*/
+.portfolio .project-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface-color);
+  border-radius: 8px;
+  overflow: hidden;
+  border-top: 3px solid var(--accent-color);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 100%;
+}
+
+.portfolio .project-card:hover {
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px);
+}
+
+.portfolio .project-card-header {
+  padding: 20px 22px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.portfolio .project-card-header .project-icon {
+  font-size: 1.7rem;
+  color: var(--accent-color);
+  line-height: 1;
+}
+
+.portfolio .project-card-header .project-type {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 85%);
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+
+.portfolio .project-card-body {
+  padding: 0 22px 16px;
+  flex: 1;
+}
+
+.portfolio .project-card-body h4 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 9px;
+  line-height: 1.35;
+  color: var(--heading-color);
+}
+
+.portfolio .project-card-body p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 14px;
+}
+
+.portfolio .tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.portfolio .tech-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 78%);
+}
+
+.portfolio .project-card-footer {
+  padding: 13px 22px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.portfolio .project-card-footer .btn-github {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--default-color);
+  text-decoration: none;
+  padding: 5px 13px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 65%);
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.portfolio .project-card-footer .btn-github:hover {
+  background: var(--default-color);
+  color: #111;
+}
+
+.portfolio .project-card-footer .btn-details {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-color);
+  text-decoration: none;
+  padding: 5px 13px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  transition: all 0.2s;
+}
+
+.portfolio .project-card-footer .btn-details:hover {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Project Detail Page (text-only layout for projects without images)
+--------------------------------------------------------------*/
+.portfolio-details .project-detail-header {
+  background: color-mix(in srgb, var(--accent-color), transparent 88%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-radius: 8px;
+  padding: 40px 36px;
+  margin-bottom: 0;
+}
+
+.portfolio-details .project-detail-header .project-detail-icon {
+  font-size: 3rem;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+}
+
+.portfolio-details .project-detail-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+}
+
+.portfolio-details .project-detail-header .detail-type {
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.portfolio-details .portfolio-description ul {
+  padding-left: 18px;
+}
+
+.portfolio-details .portfolio-description ul li {
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 8px;
+}

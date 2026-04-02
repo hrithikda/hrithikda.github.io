@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Spotify Stream Prediction</title>
+  <title>CareSight — Hospital Readmission Prediction</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -27,13 +27,6 @@
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Personal
-  * Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body class="portfolio-details-page">
@@ -42,9 +35,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.png" alt=""> -->
-        <h1 class="sitename">Spotify Stream Prediction</h1>
+        <h1 class="sitename">CareSight</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -52,25 +43,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <!-- <li><a href="services.html">Services</a></li> -->
           <li><a href="portfolio.html">Projects</a></li>
-          <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Dropdown 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="#">Deep Dropdown 1</a></li>
-                  <li><a href="#">Deep Dropdown 2</a></li>
-                  <li><a href="#">Deep Dropdown 3</a></li>
-                  <li><a href="#">Deep Dropdown 4</a></li>
-                  <li><a href="#">Deep Dropdown 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Dropdown 2</a></li>
-              <li><a href="#">Dropdown 3</a></li>
-              <li><a href="#">Dropdown 4</a></li>
-            </ul>
-          </li> -->
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -83,21 +56,13 @@
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <!-- <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Portfolio Details</h1>
-              <p class="mb-0">Odio et unde deleniti. Deserunt numquam exercitationem. Officiis quo odio sint voluptas consequatur ut a odio voluptatem. Sit dolorum debitis veritatis natus dolores. Quasi ratione sint. Sit quaerat ipsum dolorem.</p>
-            </div>
-          </div>
-        </div> -->
-      </div>
+      <div class="heading"></div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Portfolio Details</li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li class="current">CareSight</li>
           </ol>
         </div>
       </nav>
@@ -112,14 +77,11 @@
 
           <div class="col-lg-8">
             <div class="portfolio-details-slider swiper init-swiper">
-
               <script type="application/json" class="swiper-config">
                 {
                   "loop": true,
                   "speed": 600,
-                  "autoplay": {
-                    "delay": 5000
-                  },
+                  "autoplay": { "delay": 5000 },
                   "slidesPerView": "auto",
                   "pagination": {
                     "el": ".swiper-pagination",
@@ -128,22 +90,42 @@
                   }
                 }
               </script>
-
               <div class="swiper-wrapper align-items-center">
-
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/spotify1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/spotify12jpg.jpg" alt="">
+                  <img src="assets/img/portfolio/HR1.jpg" alt="CareSight Dashboard">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/spotify3.jpg" alt="">
+                  <img src="assets/img/portfolio/HR2.jpg" alt="CareSight Model Results">
                 </div>
-
               </div>
               <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                CareSight predicts excess hospital readmission ratios across approximately 18,000 US facilities
+                using CMS public data. Hospital readmission rates are a direct quality metric — CMS financially
+                penalizes hospitals with avoidable readmissions. This project builds and compares multiple
+                regression models to surface which facilities are at risk and why.
+              </p>
+
+              <h2>What was built</h2>
+              <ul>
+                <li>Multi-model benchmark: Ridge regression, Lasso regression, XGBoost, and a neural network (TensorFlow/Keras) trained on CMS hospital-level data.</li>
+                <li>Best model: Neural Network (R&sup2; = 0.975), XGBoost (R&sup2; = 0.952) — results reported on a held-out test set.</li>
+                <li>SHAP-based feature importance analysis to explain which discharge and patient-volume features drive predicted readmission risk.</li>
+                <li>Saved model artifacts: <code>.pkl</code> (XGBoost) and <code>.h5</code> (neural network) for reproducible inference.</li>
+                <li>Clean data pipeline: raw CMS CSV ingestion, preprocessing, feature engineering, and train/test split in a single notebook.</li>
+                <li>Well-structured README with problem statement, methodology, results table, and setup instructions.</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Healthcare ML has real regulatory stakes. Identifying high-risk facilities before CMS penalties are
+                issued gives administrators actionable lead time. SHAP explanations make the model's signals
+                interpretable to non-technical stakeholders — a requirement in any healthcare decision-support context.
+              </p>
             </div>
           </div>
 
@@ -151,20 +133,12 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project information</h3>
               <ul>
-                <li><strong>Category</strong>: Data Science</li>
-                <!-- <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li> -->
-                <li><strong>Project URL</strong>: <a href="https://github.com/aakashskapadia/Spotifystreamprediction.git" target="_blank">Click here for GitHub Repo</a></li>
+                <li><strong>Category</strong>: Healthcare ML</li>
+                <li><strong>Best model</strong>: Neural Network &mdash; R&sup2; = 0.975</li>
+                <li><strong>Dataset</strong>: CMS hospital readmission data (~18,000 facilities)</li>
+                <li><strong>Stack</strong>: Python, XGBoost, TensorFlow, SHAP, Scikit-learn, Pandas</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/Hospital-Readmission-Prediction" target="_blank">Hospital-Readmission-Prediction</a></li>
               </ul>
-            </div>
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <!-- <h2></h2> -->
-              <p>
-                <li>Developed and executed multiple machine learning regression models, including Linear Regression, Random Forest, Ridge Regression, and Lasso Regression, to predict the stream count of songs on Spotify based on key attributes such as genre, artist popularity, and song length.</li><br>
-                <li>Optimized model performance by tuning hyperparameters, resulting in an accuracy improvement of 20% across models.</li><br>
-                <li>Compared model accuracies and identified Random Forest as the most effective algorithm, achieving a prediction accuracy of 85% for stream counts.</li><br>
-              <li>Applied feature importance analysis, reducing model complexity by 15% while maintaining high accuracy, leading to faster computation times and more efficient predictions.</li>
-              </p>
             </div>
           </div>
 
@@ -175,8 +149,6 @@
     </section><!-- /Portfolio Details Section -->
 
   </main>
-
- 
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
