@@ -199,4 +199,14 @@
   
     });
   
+  /**
+   * Site wallpaper pattern — inject on every page
+   */
+  (function() {
+    const wallpaper = document.createElement('div');
+    wallpaper.className = 'site-wallpaper';
+    wallpaper.setAttribute('aria-hidden', 'true');
+    document.body.insertBefore(wallpaper, document.body.firstChild);
+  })();
+
   })();
