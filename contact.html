@@ -81,74 +81,104 @@
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="row gy-4 justify-content-center">
+        <div class="row gy-5 align-items-start">
 
-          <div class="col-md-4">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="200">
-              <i class="icon bi bi-geo-alt flex-shrink-0"></i>
-              <div>
-                <h3>Location</h3>
-                <p>Chicago, Illinois</p>
+          <!-- Left: Info Panel -->
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="150">
+            <div class="contact-info-panel">
+
+              <div class="contact-availability">
+                <span class="availability-dot"></span>
+                Open to full-time opportunities
               </div>
+
+              <h2 class="contact-panel-heading">Let's build<br>something together.</h2>
+              <p class="contact-panel-sub">I'm actively looking for roles in AI engineering, data science, and ML. Whether you have an opportunity or just want to connect — reach out.</p>
+
+              <div class="contact-detail-list">
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon"><i class="bi bi-geo-alt"></i></div>
+                  <div>
+                    <span class="contact-detail-label">Location</span>
+                    <span class="contact-detail-value">Chicago, IL &nbsp;·&nbsp; Open to relocation</span>
+                  </div>
+                </div>
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon"><i class="bi bi-envelope"></i></div>
+                  <div>
+                    <span class="contact-detail-label">Email</span>
+                    <a href="mailto:hrithikda@gmail.com" class="contact-detail-value">hrithikda@gmail.com</a>
+                  </div>
+                </div>
+                <div class="contact-detail-item">
+                  <div class="contact-detail-icon"><i class="bi bi-telephone"></i></div>
+                  <div>
+                    <span class="contact-detail-label">Phone</span>
+                    <span class="contact-detail-value">312.375.8134</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-socials">
+                <a href="https://www.linkedin.com/in/hrithikda/" target="_blank" class="contact-social-btn" aria-label="LinkedIn">
+                  <i class="bi bi-linkedin"></i> LinkedIn
+                </a>
+                <a href="https://github.com/hrithikda" target="_blank" class="contact-social-btn" aria-label="GitHub">
+                  <i class="bi bi-github"></i> GitHub
+                </a>
+              </div>
+
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="300">
-              <i class="icon bi bi-envelope flex-shrink-0"></i>
-              <div>
-                <h3>Email</h3>
-                <p><a href="mailto:hrithikda@gmail.com">hrithikda@gmail.com</a></p>
-              </div>
+          <!-- Right: Form -->
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="250">
+            <div class="contact-form-card">
+              <form id="contact-form">
+                <div class="row gy-3">
+
+                  <div class="col-md-6">
+                    <div class="contact-field">
+                      <label>Your Name</label>
+                      <input type="text" name="name" placeholder="Hrithik D.A" required>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="contact-field">
+                      <label>Email Address</label>
+                      <input type="email" name="email" placeholder="you@company.com" required>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="contact-field">
+                      <label>Subject</label>
+                      <input type="text" name="subject" placeholder="Job opportunity / Collaboration / Just saying hi" required>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="contact-field">
+                      <label>Message</label>
+                      <textarea name="message" rows="6" placeholder="Tell me a bit about the role or what you're working on..." required></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div id="form-loading" class="contact-status contact-status--loading" style="display:none;"><i class="bi bi-arrow-repeat"></i> Sending...</div>
+                    <div id="form-error" class="contact-status contact-status--error" style="display:none;"></div>
+                    <div id="form-success" class="contact-status contact-status--success" style="display:none;"><i class="bi bi-check-circle"></i> Message sent — I'll get back to you soon!</div>
+                    <button type="submit" class="contact-submit-btn">
+                      Send Message <i class="bi bi-send"></i>
+                    </button>
+                  </div>
+
+                </div>
+              </form>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="info-item d-flex align-items-center" data-aos="fade-up" data-aos-delay="400">
-              <i class="icon bi bi-share flex-shrink-0"></i>
-              <div>
-                <h3>Connect</h3>
-                <div class="social-links">
-                  <a href="https://www.linkedin.com/in/hrithikda/" target="_blank" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                  <a href="https://github.com/hrithikda" target="_blank" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="row mt-5" data-aos="fade-up" data-aos-delay="500">
-          <div class="col-lg-8 mx-auto">
-            <form id="contact-form">
-              <div class="row gy-4">
-
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                </div>
-
-                <div class="col-md-6">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required>
-                </div>
-
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required>
-                </div>
-
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
-                </div>
-
-                <div class="col-md-12 text-center">
-                  <div id="form-loading" style="display:none; color: var(--accent-color);">Sending...</div>
-                  <div id="form-error" style="display:none; color:#e74c3c; margin-bottom:12px;"></div>
-                  <div id="form-success" style="display:none; color: var(--accent-color); margin-bottom:12px;">Your message has been sent. Thank you!</div>
-                  <button type="submit">Send Message</button>
-                </div>
-
-              </div>
-            </form>
-          </div>
         </div>
 
         <script>
@@ -163,7 +193,7 @@
               e.preventDefault();
               if (!form.checkValidity()) { form.reportValidity(); return; }
 
-              loading.style.display = 'block';
+              loading.style.display = 'flex';
               error.style.display = 'none';
               success.style.display = 'none';
 
@@ -175,18 +205,18 @@
               }).then(function (res) {
                 loading.style.display = 'none';
                 if (res.ok) {
-                  success.style.display = 'block';
+                  success.style.display = 'flex';
                   form.reset();
                 } else {
                   return res.json().then(function (json) {
                     error.textContent = json.errors ? json.errors.map(function (e) { return e.message; }).join(', ') : 'Something went wrong. Please email hrithikda@gmail.com directly.';
-                    error.style.display = 'block';
+                    error.style.display = 'flex';
                   });
                 }
               }).catch(function () {
                 loading.style.display = 'none';
                 error.textContent = 'Network error. Please email hrithikda@gmail.com directly.';
-                error.style.display = 'block';
+                error.style.display = 'flex';
               });
             });
           })();
