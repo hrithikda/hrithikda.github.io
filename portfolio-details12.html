@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>SQL Co-Pilot</title>
+  <meta name="description" content="Natural language to SQL system using few-shot prompting, schema injection, and query validation to handle complex joins, aggregations, and nested queries.">
+  <meta name="keywords" content="text-to-SQL, NLP, LLM, natural language, SQL generation, LangChain, database, Claude">
+
+  <link href="assets/img/favicon3.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">SQL Co-Pilot</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="heading"></div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li class="current">SQL Co-Pilot</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="project-detail-header">
+              <div class="project-detail-icon"><i class="bi bi-terminal"></i></div>
+              <div class="detail-type">NLP &middot; LLM &middot; Text-to-SQL</div>
+              <h2>SQL Co-Pilot</h2>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                A natural language to SQL system that translates plain-English questions into executable queries
+                against a user-provided database schema. Goes beyond basic NL-to-SQL by handling multi-table joins,
+                window functions, aggregations, and nested subqueries — with query validation before execution.
+              </p>
+
+              <h2>What was built</h2>
+              <ul>
+                <li><strong>Schema-aware prompting:</strong> Dynamic schema injection into each prompt — table names, column types, foreign key relationships, and sample values. Keeps the LLM grounded in the actual database structure.</li>
+                <li><strong>Few-shot examples:</strong> Per-schema few-shot example bank automatically selected by semantic similarity to the input question, improving accuracy on complex query patterns.</li>
+                <li><strong>Query validation:</strong> Generated SQL is parsed and validated against the schema before execution — catching hallucinated column names or incorrect table references before they hit the database.</li>
+                <li><strong>Self-correction loop:</strong> On execution error, the error message is fed back to the LLM with the failed query for one round of self-correction.</li>
+                <li><strong>FastAPI backend:</strong> Endpoints for schema registration, question submission, and result retrieval. Supports PostgreSQL and Snowflake dialects.</li>
+                <li><strong>Streamlit interface:</strong> Upload a schema, ask questions in plain English, see the generated SQL alongside results — with query history and export.</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Text-to-SQL is notoriously brittle on complex schemas — models hallucinate columns, miss joins,
+                or generate syntactically valid but semantically wrong queries. The schema injection + validation +
+                self-correction loop addresses each failure mode directly, making the system reliable enough for
+                non-technical users to query production databases without writing a line of SQL.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project Info</h3>
+              <ul>
+                <li><strong>Category</strong>: NLP / LLM Applications</li>
+                <li><strong>Query types</strong>: Joins, aggregations, window functions, subqueries</li>
+                <li><strong>Databases</strong>: PostgreSQL, Snowflake</li>
+                <li><strong>Stack</strong>: LangChain, Claude API, PostgreSQL, FastAPI, Streamlit, Python</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/sql-copilot" target="_blank">sql-copilot</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

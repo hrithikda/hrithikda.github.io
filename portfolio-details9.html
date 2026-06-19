@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>AI Financial Analyst Agent</title>
+  <meta name="description" content="LangGraph multi-agent system that ingests 10-K filings, earnings transcripts, and market data to generate structured investment research reports.">
+  <meta name="keywords" content="LangGraph, RAG, financial analyst, LLM, ChromaDB, agentic AI, investment research">
+
+  <link href="assets/img/favicon3.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">AI Financial Analyst</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="heading"></div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li class="current">AI Financial Analyst Agent</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="project-detail-header">
+              <div class="project-detail-icon"><i class="bi bi-bank"></i></div>
+              <div class="detail-type">Agentic AI &middot; RAG &middot; Finance</div>
+              <h2>AI Financial Analyst Agent</h2>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                A LangGraph-based multi-agent system that autonomously researches public companies by ingesting
+                SEC filings (10-K, 10-Q), earnings call transcripts, and real-time price data — then synthesizes
+                them into a structured investment research report with thesis, risks, and key financial metrics.
+              </p>
+
+              <h2>What was built</h2>
+              <ul>
+                <li><strong>Multi-agent pipeline:</strong> LangGraph orchestration with specialist agents for document retrieval, financial ratio extraction, sentiment analysis of earnings transcripts, and report synthesis.</li>
+                <li><strong>RAG retrieval:</strong> ChromaDB vector store with hybrid BM25 + dense retrieval over chunked SEC filings and transcripts. Metadata filtering by fiscal year and document type.</li>
+                <li><strong>Financial extraction:</strong> Structured output extraction (revenue, margins, FCF, D/E ratio, YoY growth) from unstructured filing text using Claude API with schema enforcement.</li>
+                <li><strong>Report generation:</strong> Templated markdown reports covering investment thesis, bull/bear case, risk factors, and comparable company context — generated per-ticker on demand.</li>
+                <li><strong>FastAPI backend:</strong> REST endpoints for ticker lookup, report generation, and cached report retrieval. Streamlit frontend for interactive querying.</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Financial research requires synthesizing information across dozens of documents with strict factual
+                accuracy — a hard test for RAG systems. This project shows how structured output enforcement, source
+                citation, and agent specialization combine to produce research that's traceable back to source documents,
+                not just plausible-sounding LLM output.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project Info</h3>
+              <ul>
+                <li><strong>Category</strong>: Agentic AI / Financial Research</li>
+                <li><strong>Agents</strong>: Retrieval, Extraction, Synthesis, Verification</li>
+                <li><strong>Data sources</strong>: SEC EDGAR, earnings transcripts, market data APIs</li>
+                <li><strong>Stack</strong>: LangGraph, LangChain, ChromaDB, Claude API, FastAPI, Streamlit, Python</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/ai-financial-analyst" target="_blank">ai-financial-analyst</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

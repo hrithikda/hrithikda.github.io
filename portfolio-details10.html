@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>LLM Observability Platform</title>
+  <meta name="description" content="Production-grade evaluation framework for RAG pipelines — RAGAS scoring, LLM-as-judge, drift detection, and regression gating with MLflow tracking.">
+  <meta name="keywords" content="LLM evaluation, RAGAS, MLflow, observability, RAG, faithfulness, hallucination detection">
+
+  <link href="assets/img/favicon3.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1 class="sitename">LLM Observability</h1>
+      </a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resume.html">Resume</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+
+    <div class="page-title" data-aos="fade">
+      <div class="heading"></div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">Projects</a></li>
+            <li class="current">LLM Observability Platform</li>
+          </ol>
+        </div>
+      </nav>
+    </div>
+
+    <section id="portfolio-details" class="portfolio-details section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+
+          <div class="col-lg-8">
+            <div class="project-detail-header">
+              <div class="project-detail-icon"><i class="bi bi-shield-check"></i></div>
+              <div class="detail-type">LLM Evaluation &middot; MLOps &middot; RAG Quality</div>
+              <h2>LLM Observability Platform</h2>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                A production-grade evaluation and observability platform for LLM applications and RAG pipelines.
+                Addresses the core problem of shipping LLM systems that look good in demos but degrade silently
+                in production — through automated scoring, drift detection, and regression gating.
+              </p>
+
+              <h2>What was built</h2>
+              <ul>
+                <li><strong>RAGAS evaluation suite:</strong> Automated scoring across faithfulness, answer relevancy, context precision, and context recall — run as a CI gate on every pipeline change.</li>
+                <li><strong>LLM-as-judge layer:</strong> Secondary evaluation using a critique LLM to score response quality, factual grounding, and instruction-following on a per-question basis.</li>
+                <li><strong>Golden test set management:</strong> Versioned dataset of question/context/ground-truth triples with tooling to expand, curate, and diff across dataset versions.</li>
+                <li><strong>Drift detection:</strong> Score distribution monitoring over time — alerts when mean faithfulness or relevancy drops below threshold across a rolling evaluation window.</li>
+                <li><strong>MLflow integration:</strong> All evaluation runs logged as experiments with metric history, dataset version, model version, and prompt template tracked for full reproducibility.</li>
+                <li><strong>FastAPI + dashboard:</strong> REST API for triggering evaluations and querying results. Streamlit dashboard showing score trends, per-question breakdowns, and regression alerts.</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Inspired directly by the RAGAS evaluation suite built for the Municipal Sustainability AI project
+                (Graduate Research Assistant, UIC) where 12 automated checkpoints across 7 prototype generations
+                raised retrieval precision by 42%. This platform generalizes that pattern into a reusable service —
+                the infrastructure layer that makes LLM systems trustworthy enough to deploy and maintain.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
+              <h3>Project Info</h3>
+              <ul>
+                <li><strong>Category</strong>: LLM Evaluation / MLOps</li>
+                <li><strong>Metrics tracked</strong>: Faithfulness, relevancy, context precision/recall, LLM-judge score</li>
+                <li><strong>Key feature</strong>: CI-gated regression testing on every release</li>
+                <li><strong>Stack</strong>: RAGAS, MLflow, LangChain, FastAPI, PostgreSQL, Streamlit, Docker</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/llm-observability" target="_blank">llm-observability</a></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <div id="preloader"></div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
