@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>FanPulse — Bayesian Marketing Mix Model</title>
+  <title>Intelligent Operations Command Center</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -29,7 +29,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">FanPulse</h1>
+        <h1 class="sitename">Ops Command Center</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
@@ -53,7 +53,7 @@
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">FanPulse</li>
+            <li class="current">Intelligent Operations Command Center</li>
           </ol>
         </div>
       </nav>
@@ -65,39 +65,40 @@
 
           <div class="col-lg-8">
             <div class="project-detail-header">
-              <div class="project-detail-icon"><i class="bi bi-activity"></i></div>
-              <div class="detail-type">Bayesian Modeling &middot; Sports Analytics</div>
-              <h2>FanPulse &mdash; Bayesian Marketing Mix Model for MLB Fan Demand</h2>
+              <div class="project-detail-icon"><i class="bi bi-cpu"></i></div>
+              <div class="detail-type">MLOps &middot; AIOps &middot; Anomaly Detection</div>
+              <h2>Intelligent Operations Command Center</h2>
             </div>
 
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Overview</h2>
               <p>
-                FanPulse is a Bayesian Marketing Mix Model (MMM) that decomposes MLB game attendance across
-                multiple demand drivers — competitive factors, weather, promotions, and marketing spend — using
-                11,972 real home games from five seasons (2019, 2021–2024). The goal is to quantify what
-                actually moves the needle on attendance and enable interactive budget-planning scenarios.
+                An end-to-end operational intelligence platform that simulates enterprise-scale observability data,
+                detects anomalies using an ensemble ML approach, forecasts capacity issues, and generates
+                RAG-powered root cause analyses through LLM reasoning — all orchestrated, tracked, and containerized
+                for production deployment.
               </p>
 
               <h2>What was built</h2>
               <ul>
-                <li>Full Bayesian MMM in PyMC with geometric adstock transforms (carry-over effects) and Hill saturation curves (diminishing returns) for each marketing channel.</li>
-                <li>Hierarchical model with partial pooling across all 30 MLB teams — shares signal between teams while preserving team-specific effects.</li>
-                <li>Reset-aware adstock: boundary conditions prevent data leakage between team-seasons (end of one season doesn't carry into the next).</li>
-                <li>Time-based holdout validation on the 2024 season — trained on 2019–2023 data, validated out-of-sample. R&sup2; &asymp; 0.33, MAPE &asymp; 23.9% (holdout).</li>
-                <li>Budget optimization via SciPy SLSQP constrained solver — finds the spend allocation across channels that maximizes predicted attendance given a total budget.</li>
-                <li>Six-page interactive Streamlit dashboard: EDA, model results, diagnostics, scenario planner, and methodology — backed by ArviZ posterior summaries.</li>
-                <li>Clear data provenance: real attendance and game results from Baseball Reference; synthetic marketing spend data clearly labeled as illustrative.</li>
-                <li>Modular codebase: <code>backend/models/</code>, <code>backend/utils/</code>, <code>streamlit_app/pages/</code> with separate concerns across ingestion, modeling, and UI.</li>
+                <li><strong>Five-layer architecture:</strong> ingestion → feature engineering → anomaly detection → forecasting → LLM reasoning, with each layer independently testable.</li>
+                <li><strong>Ingestion:</strong> configurable data generators simulating metrics, logs, tickets, and transactions — 17,280+ events processed per run. Apache Airflow DAGs for pipeline orchestration.</li>
+                <li><strong>Feature engineering:</strong> 133 features including temporal encoding, rolling statistics, and lag features across all data sources.</li>
+                <li><strong>Anomaly detection:</strong> ensemble of Isolation Forest (scikit-learn) and PyTorch autoencoder with learned combination weights. Precision 94.4%, Recall 77.1%, F1 84.9%, False Positive Rate 0.15%.</li>
+                <li><strong>Forecasting:</strong> LightGBM regressor for 1-minute CPU load prediction — 14.84% MAPE, a 35.7% improvement over baseline. Tracked with MLflow.</li>
+                <li><strong>LLM reasoning:</strong> RAG system using ChromaDB (Sentence Transformers) for historical incident retrieval, fed into Anthropic Claude API for structured root cause analysis.</li>
+                <li><strong>Serving:</strong> FastAPI with six endpoints covering health, anomalies, metrics, forecasts, model performance, and LLM analysis. Streamlit command center dashboard.</li>
+                <li><strong>Infrastructure:</strong> Docker Compose (dev) and PostgreSQL + TimescaleDB (prod), GitHub Actions CI/CD, unit and integration test suite.</li>
               </ul>
 
               <h2>Why it matters</h2>
               <p>
-                Traditional marketing attribution uses last-touch or linear rules that ignore carry-over effects and
-                diminishing returns — both of which are central to how advertising actually works. Bayesian MMM
-                quantifies uncertainty in every coefficient rather than producing point estimates, making the budget
-                recommendations more honest. The holdout R&sup2; of 0.33 reflects genuine out-of-sample difficulty
-                (attendance is noisy) rather than overfit train-set numbers.
+                Most anomaly detection projects stop at a model evaluation notebook. This one is structured as
+                a deployable service: data flows through Airflow, models are versioned in MLflow, predictions
+                are served over a REST API, and explanations are generated on-demand by an LLM with access to
+                historical incident context. The ensemble approach is deliberate — Isolation Forest catches
+                global outliers while the autoencoder learns normal operational patterns from reconstructed sequences,
+                and their combination reduces false positives to 0.15%.
               </p>
             </div>
           </div>
@@ -106,11 +107,12 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Category</strong>: Bayesian Modeling / Sports Analytics</li>
-                <li><strong>Data</strong>: 11,972 MLB home games &mdash; 2019, 2021&ndash;2024</li>
-                <li><strong>Holdout</strong>: R&sup2; &asymp; 0.33, MAPE &asymp; 23.9% (2024 season)</li>
-                <li><strong>Stack</strong>: PyMC, PyTensor, ArviZ, SciPy, pybaseball, Streamlit, pandas</li>
-                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/fanpulse" target="_blank">fanpulse</a></li>
+                <li><strong>Category</strong>: MLOps / AIOps</li>
+                <li><strong>Anomaly F1</strong>: 84.9% &nbsp;|&nbsp; <strong>Precision</strong>: 94.4%</li>
+                <li><strong>Forecast MAPE</strong>: 14.84% (35.7% over baseline)</li>
+                <li><strong>Features</strong>: 133 engineered &nbsp;|&nbsp; <strong>Events/run</strong>: 17,280+</li>
+                <li><strong>Stack</strong>: PyTorch, LightGBM, Anthropic Claude, ChromaDB, Airflow, MLflow, FastAPI, Docker</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/intelligent-operations-command-center" target="_blank">intelligent-operations-command-center</a></li>
               </ul>
             </div>
           </div>

@@ -88,27 +88,28 @@
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>Overview</h2>
               <p>
-                CareSight predicts excess hospital readmission ratios across approximately 18,000 US facilities
-                using CMS public data. Hospital readmission rates are a direct quality metric — CMS financially
-                penalizes hospitals with avoidable readmissions. This project builds and compares multiple
-                regression models to surface which facilities are at risk and why.
+                CareSight predicts Excess Readmission Ratios (ERR) across 18,774 hospital-condition records
+                from the CMS FY2024 dataset, covering six HRRP conditions: AMI, CABG, COPD, Heart Failure,
+                Hip/Knee Replacement, and Pneumonia. Hospitals with avoidable readmissions face direct CMS
+                financial penalties — this pipeline identifies at-risk facilities and explains why.
               </p>
 
               <h2>What was built</h2>
               <ul>
-                <li>Multi-model benchmark: Ridge regression, Lasso regression, XGBoost, and a neural network (TensorFlow/Keras) trained on CMS hospital-level data.</li>
-                <li>Best model: Neural Network (R&sup2; = 0.975), XGBoost (R&sup2; = 0.952) — results reported on a held-out test set.</li>
-                <li>SHAP-based feature importance analysis to explain which discharge and patient-volume features drive predicted readmission risk.</li>
-                <li>Saved model artifacts: <code>.pkl</code> (XGBoost) and <code>.h5</code> (neural network) for reproducible inference.</li>
-                <li>Clean data pipeline: raw CMS CSV ingestion, preprocessing, feature engineering, and train/test split in a single notebook.</li>
-                <li>Well-structured README with problem statement, methodology, results table, and setup instructions.</li>
+                <li>Modular ML pipeline: <code>src/preprocess.py</code>, <code>train.py</code>, <code>evaluate.py</code>, <code>pipeline.py</code> — clean separation from notebook to production-ready scripts.</li>
+                <li>XGBoost regressor with cross-validated performance: R&sup2; = 0.9480, 5-fold CV R&sup2; = 0.9378 (&plusmn;0.0031).</li>
+                <li>Binary ERR classification (ERR &gt; 1.0 = penalty risk): F1 = 0.9718, Precision = 0.9773, Recall = 0.9663.</li>
+                <li>SHAP TreeExplainer with waterfall plots — top drivers: expected readmission rate, predicted rate, number of discharges, number of readmissions, facility name (target-encoded), and condition measure.</li>
+                <li>Three-tab Streamlit dashboard: prediction input form with live SHAP waterfall, model performance metrics, and ranked feature importance visualization.</li>
+                <li>Saved model artifacts (<code>xgboost_model.pkl</code>, <code>scaler.pkl</code>) and pre-generated SHAP asset exports for reproducibility.</li>
               </ul>
 
               <h2>Why it matters</h2>
               <p>
-                Healthcare ML has real regulatory stakes. Identifying high-risk facilities before CMS penalties are
-                issued gives administrators actionable lead time. SHAP explanations make the model's signals
-                interpretable to non-technical stakeholders — a requirement in any healthcare decision-support context.
+                Healthcare ML has real regulatory stakes. A facility flagged before the CMS penalty cycle
+                can intervene on discharge protocols and care transitions. SHAP waterfall plots make the model's
+                per-hospital reasoning auditable — not just accurate — which is the standard expected in any
+                clinical decision-support context.
               </p>
             </div>
           </div>
@@ -118,9 +119,9 @@
               <h3>Project Info</h3>
               <ul>
                 <li><strong>Category</strong>: Healthcare ML</li>
-                <li><strong>Best model</strong>: Neural Network &mdash; R&sup2; = 0.975</li>
-                <li><strong>Dataset</strong>: CMS hospital readmission data (~18,000 facilities)</li>
-                <li><strong>Stack</strong>: Python, XGBoost, TensorFlow, SHAP, Scikit-learn, Pandas</li>
+                <li><strong>R&sup2;</strong>: 0.9480 &nbsp;|&nbsp; <strong>F1</strong>: 0.9718</li>
+                <li><strong>Dataset</strong>: CMS FY2024 &mdash; 18,774 hospital-condition records</li>
+                <li><strong>Stack</strong>: Python, XGBoost, SHAP, Streamlit, Scikit-learn, Pandas</li>
                 <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/Hospital-Readmission-Prediction" target="_blank">Hospital-Readmission-Prediction</a></li>
               </ul>
             </div>
