@@ -35,7 +35,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Projects</h1>
+        <h1 class="sitename">HDA</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -74,6 +74,108 @@
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
+          <!-- Featured row -->
+          <div class="row gy-2 mb-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-12">
+              <p class="portfolio-section-label">Featured</p>
+            </div>
+          </div>
+
+          <div class="row gy-4 mb-5 isotope-container" data-aos="fade-up" data-aos-delay="150">
+
+            <!-- Featured 1: Municipal Sustainability AI -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card project-card--featured h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-diagram-3 project-icon"></i>
+                  <span class="project-type">Multi-Agent AI</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Municipal Sustainability AI</h4>
+                  <p>Adopted by local governments to benchmark climate investments. 63% MAE reduction on scoring model, 42% retrieval precision gain across 7 prototype generations — 4-stage multi-LLM pipeline with DSPy, BM25 + dense retrieval, and RAGAS gating. UIC CLEAN Initiative.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">DSPy</span>
+                    <span class="tech-tag">RAGAS</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">MLflow</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/municipal-sustainability-ai" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details7.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 2: Customer Churn -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card project-card--featured h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-graph-down-arrow project-icon"></i>
+                  <span class="project-type">Full-Stack ML</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Customer Churn Analytics Platform</h4>
+                  <p>$2.1M in annual revenue at risk quantified — changed the product roadmap. XGBoost + LightGBM at 0.84 ROC-AUC across 15K customer segments, 40+ behavioral features, SHAP explainability. Mirrors the production system built at PlanSource.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">XGBoost</span>
+                    <span class="tech-tag">SHAP</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/churn-analytics-platform" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details2.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 3: Intelligent Ops -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card project-card--featured h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-cpu project-icon"></i>
+                  <span class="project-type">MLOps &middot; AIOps</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Intelligent Operations Command Center</h4>
+                  <p>F1 84.9%, FPR 0.15% on anomaly detection — ensemble Isolation Forest + PyTorch autoencoder. LightGBM forecasting at 14.84% MAPE (35.7% over baseline). RAG-powered root cause analysis via Claude API. Airflow + MLflow + FastAPI end-to-end.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">LightGBM</span>
+                    <span class="tech-tag">Claude API</span>
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">MLflow</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/intelligent-operations-command-center" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details8.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- End Featured Row -->
+
+          <!-- All Projects -->
+          <div class="row gy-2 mb-2" data-aos="fade-up">
+            <div class="col-12">
+              <p class="portfolio-section-label">All Projects</p>
+            </div>
+          </div>
+
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <!-- Project 1: Document Intelligence Hub -->
@@ -85,7 +187,7 @@
                 </div>
                 <div class="project-card-body">
                   <h4>Document Intelligence Hub</h4>
-                  <p>Offline document Q&amp;A system that ingests PDFs, Word docs, and spreadsheets and answers questions with cited sources. Combines BM25 and dense vector retrieval using Reciprocal Rank Fusion — no cloud APIs required.</p>
+                  <p>Eliminates the need to manually search documents — ask a question, get a cited answer in seconds. Hybrid BM25 + dense retrieval with Reciprocal Rank Fusion over PDFs, Word docs, and spreadsheets. Runs fully offline, no cloud APIs.</p>
                   <div class="tech-tags">
                     <span class="tech-tag">Llama 3.1 8B</span>
                     <span class="tech-tag">Ollama</span>
@@ -200,7 +302,7 @@
                 </div>
                 <div class="project-card-body">
                   <h4>QuantifyAI &mdash; Quant Alpha Research</h4>
-                  <p>ML-driven backtesting platform that fetches live market data, computes RSI, MACD, and Bollinger Band signals, trains a Random Forest classifier for buy/sell decisions, and runs portfolio simulations via Backtrader with a Streamlit dashboard.</p>
+                  <p>Turns raw price data into testable alpha — RSI, MACD, and Bollinger Band signals feed a Random Forest classifier for buy/sell decisions, then Backtrader runs the full portfolio simulation. Live data to backtest result in one pipeline.</p>
                   <div class="tech-tags">
                     <span class="tech-tag">Python</span>
                     <span class="tech-tag">scikit-learn</span>
@@ -315,7 +417,7 @@
                 </div>
                 <div class="project-card-body">
                   <h4>AI Financial Analyst Agent</h4>
-                  <p>LangGraph multi-agent system that ingests 10-K/10-Q filings, earnings call transcripts, and real-time market data to generate structured investment research reports. RAG pipeline with ChromaDB retrieval, financial ratio extraction, and LLM-driven synthesis.</p>
+                  <p>Compresses hours of 10-K/10-Q reading into a structured research brief — specialist agents for extraction, ratio analysis, sentiment, and synthesis. RAG over SEC filings with ChromaDB, cited sources in every output.</p>
                   <div class="tech-tags">
                     <span class="tech-tag">LangGraph</span>
                     <span class="tech-tag">LangChain</span>
@@ -343,7 +445,7 @@
                 </div>
                 <div class="project-card-body">
                   <h4>LLM Observability Platform</h4>
-                  <p>Production-grade evaluation framework for RAG pipelines and LLM applications. RAGAS scoring (faithfulness, relevancy, context recall), LLM-as-judge grading, golden test set management, drift detection, and regression gating — all with MLflow experiment tracking.</p>
+                  <p>Raised retrieval precision 42% across 7 prototype generations by gating every release on 12 RAGAS checkpoints. RAGAS scoring, LLM-as-judge, golden test set versioning, and drift detection — the same eval infrastructure used in the UIC CLEAN research.</p>
                   <div class="tech-tags">
                     <span class="tech-tag">RAGAS</span>
                     <span class="tech-tag">MLflow</span>
@@ -399,7 +501,7 @@
                 </div>
                 <div class="project-card-body">
                   <h4>SQL Co-Pilot</h4>
-                  <p>Natural language to SQL system that translates plain-English questions into executable queries against a schema-aware database. Uses few-shot prompting, schema injection, and query validation to handle joins, aggregations, and nested subqueries with high accuracy.</p>
+                  <p>Ask a plain-English question, get a validated, executable SQL query — handles joins, window functions, and nested subqueries. Schema injection + few-shot selection + self-correction loop cuts hallucinated columns to near zero.</p>
                   <div class="tech-tags">
                     <span class="tech-tag">LangChain</span>
                     <span class="tech-tag">Claude API</span>
@@ -427,7 +529,7 @@
                 </div>
                 <div class="project-card-body">
                   <h4>AutoDS — Autonomous Data Science Agent</h4>
-                  <p>Multi-agent system that automates the data science workflow end-to-end: EDA, feature engineering, model selection, hyperparameter tuning, and report generation — given only a dataset and a target column. Built with CrewAI agent roles and LangGraph orchestration.</p>
+                  <p>Drop in a CSV and a target column — get back a tuned model and a research-grade report. Five specialist agents (EDA → feature engineering → model selection → Optuna tuning → report) with full reasoning exposed at every step.</p>
                   <div class="tech-tags">
                     <span class="tech-tag">CrewAI</span>
                     <span class="tech-tag">LangGraph</span>
