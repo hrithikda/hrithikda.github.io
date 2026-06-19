@@ -120,7 +120,7 @@
 
         <div class="row mt-5" data-aos="fade-up" data-aos-delay="500">
           <div class="col-lg-8 mx-auto">
-            <form action="forms/contact.php" method="post" class="php-email-form">
+            <form id="contact-form">
               <div class="row gy-4">
 
                 <div class="col-md-6">
@@ -140,9 +140,9 @@
                 </div>
 
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <div id="form-loading" style="display:none; color: var(--accent-color);">Sending...</div>
+                  <div id="form-error" style="display:none; color:#e74c3c; margin-bottom:12px;"></div>
+                  <div id="form-success" style="display:none; color: var(--accent-color); margin-bottom:12px;">Your message has been sent. Thank you!</div>
                   <button type="submit">Send Message</button>
                 </div>
 
@@ -150,6 +150,47 @@
             </form>
           </div>
         </div>
+
+        <script>
+          (function () {
+            var FORMSPREE_ID = 'YOUR_FORM_ID'; // replace with your Formspree form ID
+            var form = document.getElementById('contact-form');
+            var loading = document.getElementById('form-loading');
+            var error = document.getElementById('form-error');
+            var success = document.getElementById('form-success');
+
+            form.addEventListener('submit', function (e) {
+              e.preventDefault();
+              if (!form.checkValidity()) { form.reportValidity(); return; }
+
+              loading.style.display = 'block';
+              error.style.display = 'none';
+              success.style.display = 'none';
+
+              var data = new FormData(form);
+              fetch('https://formspree.io/f/' + FORMSPREE_ID, {
+                method: 'POST',
+                body: data,
+                headers: { 'Accept': 'application/json' }
+              }).then(function (res) {
+                loading.style.display = 'none';
+                if (res.ok) {
+                  success.style.display = 'block';
+                  form.reset();
+                } else {
+                  return res.json().then(function (json) {
+                    error.textContent = json.errors ? json.errors.map(function (e) { return e.message; }).join(', ') : 'Something went wrong. Please email hrithikda@gmail.com directly.';
+                    error.style.display = 'block';
+                  });
+                }
+              }).catch(function () {
+                loading.style.display = 'none';
+                error.textContent = 'Network error. Please email hrithikda@gmail.com directly.';
+                error.style.display = 'block';
+              });
+            });
+          })();
+        </script>
 
       </div>
 
