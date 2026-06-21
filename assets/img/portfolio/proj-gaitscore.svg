@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- accelerometer waveform -->
+  <text x="60" y="118" fill="#444" font-size="10">2G</text>
+  <text x="60" y="178" fill="#444" font-size="10">1G</text>
+  <text x="60" y="238" fill="#444" font-size="10">0G</text>
+  <line x1="85" y1="235" x2="530" y2="235" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- waveform with footfall peaks -->
+  <polyline points="85,235 105,230 120,215 135,180 148,135 158,180 168,215 180,230 195,235 210,232 225,218 238,182 250,138 260,180 272,218 285,232 300,235 315,230 328,215 342,178 354,132 364,178 376,215 390,232 405,235 420,230 435,215 448,180 460,140 470,180 482,215 495,232 510,235 525,232" fill="none" stroke="#18d26e" stroke-width="2"/>
+  <!-- highlight peaks -->
+  <circle cx="148" cy="135" r="5" fill="#18d26e"/>
+  <circle cx="250" cy="138" r="5" fill="#18d26e"/>
+  <circle cx="354" cy="132" r="5" fill="#18d26e"/>
+  <circle cx="460" cy="140" r="5" fill="#18d26e"/>
+  <text x="148" y="122" text-anchor="middle" fill="#18d26e" font-size="9">step</text>
+  <text x="354" y="119" text-anchor="middle" fill="#18d26e" font-size="9">step</text>
+  <!-- score ring -->
+  <circle cx="650" cy="185" r="75" fill="none" stroke="#2a2a2a" stroke-width="12"/>
+  <circle cx="650" cy="185" r="75" fill="none" stroke="#18d26e" stroke-width="12" stroke-dasharray="340 471" stroke-dashoffset="118" stroke-linecap="round" transform="rotate(-90 650 185)"/>
+  <text x="650" y="178" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="700">83</text>
+  <text x="650" y="198" text-anchor="middle" fill="#888" font-size="11">Walk Score</text>
+  <!-- metric labels -->
+  <text x="590" y="285" fill="#888" font-size="11">Impact</text>
+  <text x="590" y="300" fill="#18d26e" font-size="11" font-weight="600">Low</text>
+  <text x="650" y="285" text-anchor="middle" fill="#888" font-size="11">Symmetry</text>
+  <text x="650" y="300" text-anchor="middle" fill="#18d26e" font-size="11" font-weight="600">94%</text>
+  <text x="710" y="285" text-anchor="end" fill="#888" font-size="11">Cadence</text>
+  <text x="710" y="300" text-anchor="end" fill="#18d26e" font-size="11" font-weight="600">112 spm</text>
+  <!-- title -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">GaitScore</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">iOS Gait Analysis · 50Hz CoreMotion · Real-Time Signal Processing</text>
+  <!-- tags -->
+  <rect x="215" y="430" width="55" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="242" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Swift</text>
+  <rect x="283" y="430" width="70" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="318" y="446" text-anchor="middle" fill="#18d26e" font-size="12">SwiftUI</text>
+  <rect x="366" y="430" width="95" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="413" y="446" text-anchor="middle" fill="#18d26e" font-size="12">CoreMotion</text>
+  <rect x="474" y="430" width="55" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="501" y="446" text-anchor="middle" fill="#18d26e" font-size="12">MVVM</text>
+  <rect x="542" y="430" width="80" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="582" y="446" text-anchor="middle" fill="#18d26e" font-size="12">On-Device</text>
+</svg>

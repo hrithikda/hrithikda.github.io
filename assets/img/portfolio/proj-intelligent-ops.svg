@@ -1,0 +1,52 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- fake metric chart -->
+  <polyline points="60,260 100,240 140,255 180,200 220,210 260,170 300,230 340,145 380,200 420,160" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- anomaly spike highlighted -->
+  <circle cx="340" cy="145" r="7" fill="#e74c3c" fill-opacity="0.9"/>
+  <line x1="340" y1="115" x2="340" y2="138" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <text x="340" y="108" text-anchor="middle" fill="#e74c3c" font-size="11">Anomaly</text>
+  <!-- normal line colour after anomaly -->
+  <polyline points="420,160 460,190 500,175 540,185" fill="none" stroke="#333" stroke-width="2"/>
+  <!-- x-axis -->
+  <line x1="55" y1="280" x2="560" y2="280" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- metrics -->
+  <rect x="590" y="120" width="175" height="200" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="677" y="148" text-anchor="middle" fill="#18d26e" font-size="13" font-weight="600">Results</text>
+  <line x1="605" y1="155" x2="750" y2="155" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="605" y="175" fill="#888" font-size="11">Precision</text>
+  <text x="750" y="175" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">94.4%</text>
+  <text x="605" y="196" fill="#888" font-size="11">F1 Score</text>
+  <text x="750" y="196" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">84.9%</text>
+  <text x="605" y="217" fill="#888" font-size="11">FPR</text>
+  <text x="750" y="217" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">0.15%</text>
+  <text x="605" y="238" fill="#888" font-size="11">MAPE</text>
+  <text x="750" y="238" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">14.84%</text>
+  <text x="605" y="259" fill="#888" font-size="11">vs Baseline</text>
+  <text x="750" y="259" text-anchor="end" fill="#18d26e" font-size="11" font-weight="600">−35.7%</text>
+  <text x="605" y="280" fill="#888" font-size="11">Features</text>
+  <text x="750" y="280" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">133</text>
+  <text x="605" y="301" fill="#888" font-size="11">Events/run</text>
+  <text x="750" y="301" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">17,280+</text>
+  <!-- title -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">Intelligent Ops</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">ML Anomaly Detection · LLM Root Cause Analysis</text>
+  <!-- tags -->
+  <rect x="155" y="430" width="70" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="190" y="446" text-anchor="middle" fill="#18d26e" font-size="12">PyTorch</text>
+  <rect x="238" y="430" width="90" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="283" y="446" text-anchor="middle" fill="#18d26e" font-size="12">LightGBM</text>
+  <rect x="341" y="430" width="85" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="383" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Claude API</text>
+  <rect x="439" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="471" y="446" text-anchor="middle" fill="#18d26e" font-size="12">MLflow</text>
+  <rect x="517" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="549" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Airflow</text>
+</svg>
