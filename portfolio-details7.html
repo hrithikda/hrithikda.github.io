@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Municipal Sustainability AI</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
+  <title>Adaptive RAG — Corrective Retrieval-Augmented Generation</title>
+  <meta name="description" content="Adaptive RAG: A self-evaluating RAG pipeline using LangGraph and Claude that scores retrieved context before answering and automatically falls back to live web search when confidence is low.">
+  <meta name="keywords" content="RAG, LangGraph, Claude, ChromaDB, Tavily, GenAI, agentic AI, retrieval augmented generation, Python">
 
   <link href="assets/img/favicon3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,7 +21,6 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="portfolio-details-page">
@@ -29,14 +28,14 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">Municipal Sustainability AI</h1>
+        <h1 class="sitename">HDA</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="portfolio.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -47,13 +46,22 @@
   <main class="main">
 
     <div class="page-title" data-aos="fade">
-      <div class="heading"></div>
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Adaptive RAG</h1>
+              <p class="mb-0">Corrective Retrieval-Augmented Generation &nbsp;·&nbsp; Agentic AI &nbsp;·&nbsp; LangGraph</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">Municipal Sustainability AI</li>
+            <li class="current">Adaptive RAG</li>
           </ol>
         </div>
       </nav>
@@ -64,39 +72,25 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="project-detail-header">
-              <div class="project-detail-icon"><i class="bi bi-diagram-3"></i></div>
-              <div class="detail-type">Multi-Agent AI &middot; Independent Study &middot; UIC IDS 596</div>
-              <h2>Municipal Sustainability AI</h2>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Overview</h2>
-              <p>
-                Built as an independent study (IDS 596) at UIC, this project traces the full arc of modern AI
-                system architecture — from a single LLM extracting structured text to a multi-agent system with
-                specialist roles, self-verification, and workflow orchestration. The domain is municipal climate
-                and sustainability policy: scraping, indexing, and reasoning over public data from 15 US states.
-              </p>
-
-              <h2>What was built</h2>
-              <ul>
-                <li>Web scraper targeting 41 climate and sustainability data sources — producing a final corpus of 35 documents, 1,895,253 characters.</li>
-                <li>DSPy 2.6.27 pipeline with Ollama (llama3.1:8b) for structured information extraction from unstructured municipal policy text.</li>
-                <li>ChromaDB vector store with nomic-embed-text (768-dim) embeddings — 714 document chunks indexed for semantic search with retrieval latency under 150ms.</li>
-                <li>Multi-agent routing: specialist LLM roles for different query types, OutputCritic pattern for self-verification, and force-finish mechanisms for ReAct agent reliability.</li>
-                <li>scikit-learn scoring model trained on 35 labeled samples — 63% MAE improvement (13.51 → 5.01) over baseline.</li>
-                <li>n8n workflow orchestration for pipeline automation; FastAPI backend; Streamlit dashboard for cross-city comparative queries.</li>
-                <li>Docker Compose deployment; 12/12 system checkpoints passing; full pipeline completes in under 3 minutes.</li>
-              </ul>
-
-              <h2>Why it matters</h2>
-              <p>
-                The project demonstrates architectural progression — not just a RAG chatbot, but a system that
-                shows when and why you'd add each layer: structured extraction with DSPy over naive prompting,
-                semantic chunking over keyword search, agent routing over single-model calls, and workflow
-                orchestration over ad-hoc scripts. Each step is motivated and measurable.
-              </p>
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": { "delay": 5000 },
+                  "slidesPerView": "auto",
+                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="Adaptive RAG Pipeline">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-2.jpg" alt="Adaptive RAG LangGraph Flow">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
@@ -104,13 +98,25 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Category</strong>: Multi-Agent AI / Agentic Workflows</li>
-                <li><strong>Context</strong>: UIC IDS 596 Independent Study</li>
-                <li><strong>Corpus</strong>: 714 chunks, 1.9M characters, 15 states</li>
-                <li><strong>ML improvement</strong>: 63% MAE reduction</li>
-                <li><strong>Stack</strong>: DSPy, Llama 3.1 8B, ChromaDB, FastAPI, n8n, Streamlit, Docker</li>
-                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/municipal-sustainability-ai" target="_blank">municipal-sustainability-ai</a></li>
+                <li><strong>Domain:</strong> GenAI / Agentic AI / RAG</li>
+                <li><strong>Stack:</strong> Python, LangGraph, Claude API, ChromaDB, Tavily, FastAPI, Streamlit</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/self-evaluating-rag" target="_blank">View Repository</a></li>
               </ul>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>The Problem</h2>
+              <p>Standard RAG pipelines blindly pass whatever they retrieve to the LLM. When knowledge bases are stale, incomplete, or queries are out-of-distribution, models either hallucinate confidently or give non-answers — with no mechanism to detect the failure.</p>
+
+              <h2>What I Built</h2>
+              <ul>
+                <li>Designed a self-correcting retrieval loop using LangGraph <code>StateGraph</code>: an LLM judge (Claude Haiku) scores each retrieved document 0.0–1.0 in parallel, and routes to live Tavily web search when average relevance falls below 0.6</li>
+                <li>Implemented the CRAG decompose-and-recompose technique — strips noise from mixed-source context by filtering to only query-relevant sentences before final generation with Claude Sonnet</li>
+                <li>Exposed the full pipeline via a FastAPI REST API and an interactive Streamlit dashboard with live pipeline visualization and source attribution</li>
+              </ul>
+
+              <h2>Impact</h2>
+              <p>Eliminates confident hallucinations by generating answers only from verified, high-relevance context — with automatic live fallback and full source attribution on every response.</p>
             </div>
           </div>
 
@@ -136,5 +142,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

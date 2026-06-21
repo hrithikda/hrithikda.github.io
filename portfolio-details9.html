@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>AI Financial Analyst Agent</title>
-  <meta name="description" content="LangGraph multi-agent system that ingests 10-K filings, earnings transcripts, and market data to generate structured investment research reports.">
-  <meta name="keywords" content="LangGraph, RAG, financial analyst, LLM, ChromaDB, agentic AI, investment research">
+  <title>Intelligent Ops — ML Anomaly Detection & RAG Root Cause Analysis</title>
+  <meta name="description" content="Intelligent Operations Command Center: Ensemble ML anomaly detection (94.4% precision) with LightGBM forecasting and RAG-powered LLM root cause analysis using Claude.">
+  <meta name="keywords" content="anomaly detection, LightGBM, PyTorch, Isolation Forest, RAG, Claude, MLflow, FastAPI, Python, machine learning, MLOps">
 
   <link href="assets/img/favicon3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,7 +21,6 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="portfolio-details-page">
@@ -29,14 +28,14 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">AI Financial Analyst</h1>
+        <h1 class="sitename">HDA</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="portfolio.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -47,13 +46,22 @@
   <main class="main">
 
     <div class="page-title" data-aos="fade">
-      <div class="heading"></div>
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Intelligent Ops</h1>
+              <p class="mb-0">ML Anomaly Detection &nbsp;·&nbsp; LLM Root Cause Analysis &nbsp;·&nbsp; Applied AI</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">AI Financial Analyst Agent</li>
+            <li class="current">Intelligent Ops</li>
           </ol>
         </div>
       </nav>
@@ -64,36 +72,25 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="project-detail-header">
-              <div class="project-detail-icon"><i class="bi bi-bank"></i></div>
-              <div class="detail-type">Agentic AI &middot; RAG &middot; Finance</div>
-              <h2>AI Financial Analyst Agent</h2>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Overview</h2>
-              <p>
-                A LangGraph-based multi-agent system that autonomously researches public companies by ingesting
-                SEC filings (10-K, 10-Q), earnings call transcripts, and real-time price data — then synthesizes
-                them into a structured investment research report with thesis, risks, and key financial metrics.
-              </p>
-
-              <h2>What was built</h2>
-              <ul>
-                <li><strong>Multi-agent pipeline:</strong> LangGraph orchestration with specialist agents for document retrieval, financial ratio extraction, sentiment analysis of earnings transcripts, and report synthesis.</li>
-                <li><strong>RAG retrieval:</strong> ChromaDB vector store with hybrid BM25 + dense retrieval over chunked SEC filings and transcripts. Metadata filtering by fiscal year and document type.</li>
-                <li><strong>Financial extraction:</strong> Structured output extraction (revenue, margins, FCF, D/E ratio, YoY growth) from unstructured filing text using Claude API with schema enforcement.</li>
-                <li><strong>Report generation:</strong> Templated markdown reports covering investment thesis, bull/bear case, risk factors, and comparable company context — generated per-ticker on demand.</li>
-                <li><strong>FastAPI backend:</strong> REST endpoints for ticker lookup, report generation, and cached report retrieval. Streamlit frontend for interactive querying.</li>
-              </ul>
-
-              <h2>Why it matters</h2>
-              <p>
-                Financial research requires synthesizing information across dozens of documents with strict factual
-                accuracy — a hard test for RAG systems. This project shows how structured output enforcement, source
-                citation, and agent specialization combine to produce research that's traceable back to source documents,
-                not just plausible-sounding LLM output.
-              </p>
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": { "delay": 5000 },
+                  "slidesPerView": "auto",
+                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-1.jpg" alt="Intelligent Ops Anomaly Detection">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/product-2.jpg" alt="Intelligent Ops Forecasting Dashboard">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
@@ -101,12 +98,25 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Category</strong>: Agentic AI / Financial Research</li>
-                <li><strong>Agents</strong>: Retrieval, Extraction, Synthesis, Verification</li>
-                <li><strong>Data sources</strong>: SEC EDGAR, earnings transcripts, market data APIs</li>
-                <li><strong>Stack</strong>: LangGraph, LangChain, ChromaDB, Claude API, FastAPI, Streamlit, Python</li>
-                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/ai-financial-analyst" target="_blank">ai-financial-analyst</a></li>
+                <li><strong>Domain:</strong> Applied AI / MLOps / AIOps</li>
+                <li><strong>Stack:</strong> Python, PyTorch, scikit-learn, LightGBM, ChromaDB, Claude API, FastAPI, MLflow, Apache Airflow, Streamlit</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/intelligent-operations-command-center" target="_blank">View Repository</a></li>
               </ul>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>The Problem</h2>
+              <p>Enterprise operations teams are buried in noisy telemetry — infrastructure metrics, application logs, and transaction data — with no scalable way to detect anomalies, forecast capacity, or diagnose root causes without hours of manual investigation.</p>
+
+              <h2>What I Built</h2>
+              <ul>
+                <li>Engineered 133 features across 6 groups (temporal, rolling stats, z-scores, lag, rate-of-change, cross-metric) and built an ensemble of Isolation Forest + PyTorch Autoencoder achieving <strong>94.4% precision</strong> and <strong>84.9% F1</strong> on 17,280+ events per run</li>
+                <li>Built a LightGBM capacity forecaster with <strong>14.84% MAPE</strong> — a <strong>35.7% improvement</strong> over the Prophet seasonal baseline — tracked across experiments with MLflow</li>
+                <li>Integrated RAG-powered LLM reasoning: detected anomalies are matched against historical incidents in ChromaDB, then synthesized by Claude into structured root cause analyses with remediation steps, severity estimates, and resolution time forecasts</li>
+              </ul>
+
+              <h2>Impact</h2>
+              <p>Automated end-to-end operational intelligence: from raw telemetry ingestion through anomaly detection, capacity forecasting, and LLM-generated root cause explanations — replacing manual incident triage with a production-grade ML pipeline.</p>
             </div>
           </div>
 
@@ -132,5 +142,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>

@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>FanPulse — Bayesian Marketing Mix Model for MLB Fan Demand</title>
-  <meta name="description" content="FanPulse: Bayesian MMM fit on 11,972 real MLB home games using PyMC and NUTS — decomposing attendance into team performance, game context, and marketing channels with adstock and Hill saturation transforms.">
-  <meta name="keywords" content="Bayesian MMM, marketing mix model, PyMC, NUTS, MLB, sports analytics, Streamlit, Python, causal inference">
+  <title>GaitScore — iOS Real-Time Gait Analysis App</title>
+  <meta name="description" content="GaitScore: iOS app built in SwiftUI that streams CoreMotion accelerometer data at 50Hz, detects footsteps via peak detection, and scores walk quality in real time — impact, symmetry, and a 0–100 composite score.">
+  <meta name="keywords" content="iOS, Swift, SwiftUI, CoreMotion, gait analysis, health tech, signal processing, MVVM, mobile">
 
   <link href="assets/img/favicon3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -50,8 +50,8 @@
         <div class="container">
           <div class="row d-flex justify-content-center text-center">
             <div class="col-lg-8">
-              <h1>FanPulse</h1>
-              <p class="mb-0">Bayesian Marketing Mix Model &nbsp;·&nbsp; MLB Fan Demand &nbsp;·&nbsp; Causal Analytics</p>
+              <h1>GaitScore</h1>
+              <p class="mb-0">iOS Gait Analysis &nbsp;·&nbsp; Real-Time Signal Processing &nbsp;·&nbsp; SwiftUI</p>
             </div>
           </div>
         </div>
@@ -61,7 +61,7 @@
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">FanPulse</li>
+            <li class="current">GaitScore</li>
           </ol>
         </div>
       </nav>
@@ -84,10 +84,10 @@
               </script>
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-1.jpg" alt="FanPulse MMM Dashboard">
+                  <img src="assets/img/portfolio/product-3.jpg" alt="GaitScore Walk Quality Score">
                 </div>
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/branding-2.jpg" alt="FanPulse Budget Scenario Planning">
+                  <img src="assets/img/portfolio/product-2.jpg" alt="GaitScore Gait Metrics">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -98,26 +98,26 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Domain:</strong> Marketing Analytics / Bayesian ML</li>
-                <li><strong>Stack:</strong> Python, PyMC, NUTS (HMC), pytensor, Streamlit, pandas, NumPy</li>
-                <li><strong>Data:</strong> 11,972 real MLB home games — Baseball Reference (2019, 2021–2024)</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/fanpulse" target="_blank">View Repository</a></li>
+                <li><strong>Domain:</strong> Mobile / Health Tech / Signal Processing</li>
+                <li><strong>Stack:</strong> Swift, SwiftUI, CoreMotion, MVVM</li>
+                <li><strong>Platform:</strong> iOS (on-device, no cloud)</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/GaitScore" target="_blank">View Repository</a></li>
               </ul>
             </div>
 
             <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
               <h2>The Problem</h2>
-              <p>What actually drives MLB game attendance, and how should a team allocate a fixed seasonal marketing budget? The drivers are correlated — opening day, a pennant race, market size, and promotions all move attendance at once — and marketing has carry-over and saturation effects that naive regression cannot capture.</p>
+              <p>Every iPhone silently counts steps — but no consumer app explains the signal processing behind it, or goes further to measure gait <em>quality</em>: how hard you land, and whether your left and right legs are keeping the same rhythm.</p>
 
               <h2>What I Built</h2>
               <ul>
-                <li>Fit a Bayesian Marketing Mix Model in PyMC on <strong>11,972 real MLB home games</strong> across 5 seasons and all 30 teams using NUTS (Hamiltonian Monte Carlo) — decomposing log-attendance into a hierarchical team intercept, game-context and performance covariates, and 4 marketing channels passed through <strong>geometric adstock</strong> and <strong>Hill saturation</strong> transforms</li>
-                <li>Built a fully Bayesian variant that places priors on and <em>learns</em> each channel's adstock decay, Hill α, and Hill γ from data using a reset-aware <code>pytensor.scan</code> — full posteriors over every parameter, uncertainty included</li>
-                <li>Six-page Streamlit dashboard for effect decomposition, posterior predictive checks, channel diagnostics, and interactive budget scenario planning with return-on-spend curves</li>
+                <li>Streams raw CoreMotion accelerometer data at <strong>50Hz</strong>, collapses x/y/z into an acceleration magnitude signal, and detects footsteps via peak detection — the same fundamental technique used inside Apple's pedometer — computing step cadence in real time from a rolling 3-second buffer</li>
+                <li>Computes two gait metrics from the step stream: <strong>impact</strong> (average peak acceleration per footfall, mapped to Low/Moderate/High) and <strong>symmetry</strong> (variance in alternating left/right time gaps, exposing asymmetric gait or a limp as a measurable number)</li>
+                <li>Blends both into a live <strong>0–100 Walk Quality Score</strong> with clean SwiftUI real-time display; fully on-device MVVM architecture with no cloud dependencies or third-party ML libraries</li>
               </ul>
 
               <h2>Impact</h2>
-              <p>A production-grade Bayesian causal model on real sports data — demonstrating the same technique used by major advertisers to attribute and optimize spend, applied end-to-end from data to interactive planning tool.</p>
+              <p>A from-scratch exploration of the signal processing that underpins health wearables — demonstrating that the "magic" of step counting is peak detection on an accelerometer signal, and extending it into clinically meaningful gait quality metrics.</p>
             </div>
           </div>
 

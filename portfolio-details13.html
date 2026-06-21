@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>AutoDS — Autonomous Data Science Agent</title>
-  <meta name="description" content="Multi-agent system that automates the data science workflow end-to-end: EDA, feature engineering, model selection, hyperparameter tuning, and report generation.">
-  <meta name="keywords" content="AutoML, multi-agent, CrewAI, LangGraph, autonomous data science, automated EDA, model selection">
+  <title>SustainAI — Agentic AI Architecture for Municipal Sustainability</title>
+  <meta name="description" content="SustainAI: IDS 596 independent study at UIC — 7 progressive prototypes evolving from a single LLM to a production multi-agent system with DSPy, RAG, ML scoring, and n8n orchestration.">
+  <meta name="keywords" content="agentic AI, DSPy, RAG, multi-agent, Ollama, ChromaDB, n8n, FastAPI, Streamlit, LLM, Python">
 
   <link href="assets/img/favicon3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,7 +21,6 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
-
 </head>
 
 <body class="portfolio-details-page">
@@ -29,14 +28,14 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">AutoDS</h1>
+        <h1 class="sitename">HDA</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html">Projects</a></li>
+          <li><a href="portfolio.html" class="active">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -47,13 +46,22 @@
   <main class="main">
 
     <div class="page-title" data-aos="fade">
-      <div class="heading"></div>
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>SustainAI</h1>
+              <p class="mb-0">Agentic AI Architecture &nbsp;·&nbsp; Single LLM to Multi-Agent &nbsp;·&nbsp; UIC IDS 596</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">AutoDS — Autonomous Data Science Agent</li>
+            <li class="current">SustainAI</li>
           </ol>
         </div>
       </nav>
@@ -64,38 +72,25 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="project-detail-header">
-              <div class="project-detail-icon"><i class="bi bi-robot"></i></div>
-              <div class="detail-type">Multi-Agent AI &middot; AutoML &middot; Agentic Workflows</div>
-              <h2>AutoDS — Autonomous Data Science Agent</h2>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>Overview</h2>
-              <p>
-                A multi-agent system that automates the full data science workflow given only a CSV file and a
-                target column. Specialist agents handle EDA, feature engineering, model selection, hyperparameter
-                tuning, and report generation — orchestrated by LangGraph with CrewAI agent roles.
-              </p>
-
-              <h2>What was built</h2>
-              <ul>
-                <li><strong>Agent roles:</strong> EDA Agent (profiling, missing values, distributions, correlations), Feature Engineer (encoding, scaling, interaction terms, leakage detection), Model Selector (baseline benchmarking across 6 algorithms), Tuner (Optuna-based HPO), and Reporter (narrative report generation).</li>
-                <li><strong>LangGraph orchestration:</strong> Stateful workflow DAG with conditional routing — model selection outcome determines whether to proceed to tuning or loop back to feature engineering.</li>
-                <li><strong>Tool use:</strong> Each agent has access to code execution tools, allowing them to run Python, inspect outputs, and revise their approach based on actual results rather than just planning.</li>
-                <li><strong>Model selection:</strong> Benchmarks Logistic Regression, Random Forest, XGBoost, LightGBM, CatBoost, and SVM across cross-validated AUC/RMSE. Recommends top-2 for tuning.</li>
-                <li><strong>Optuna tuning:</strong> Automated hyperparameter search with pruning — 100 trials, early stopping, and study visualization.</li>
-                <li><strong>Report output:</strong> Auto-generated markdown/PDF report covering data quality findings, feature importance, model comparison, tuning results, and deployment recommendations.</li>
-                <li><strong>Streamlit interface:</strong> Upload dataset, set target column and task type, watch agents execute in real time, download final report and best model artifact.</li>
-              </ul>
-
-              <h2>Why it matters</h2>
-              <p>
-                AutoML tools like AutoSklearn automate the search but black-box the reasoning. AutoDS exposes
-                the decision-making — you can see why the EDA agent flagged leakage, why the model selector
-                picked XGBoost over LightGBM, and what the tuner changed. The agentic approach makes
-                automation explainable, not just fast.
-              </p>
+            <div class="portfolio-details-slider swiper init-swiper">
+              <script type="application/json" class="swiper-config">
+                {
+                  "loop": true,
+                  "speed": 600,
+                  "autoplay": { "delay": 5000 },
+                  "slidesPerView": "auto",
+                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
+                }
+              </script>
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/branding-3.jpg" alt="SustainAI Multi-Agent Dashboard">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/app-1.jpg" alt="SustainAI RAG Pipeline">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
             </div>
           </div>
 
@@ -103,12 +98,26 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Category</strong>: Multi-Agent AI / AutoML</li>
-                <li><strong>Agents</strong>: EDA, Feature Engineer, Model Selector, Tuner, Reporter</li>
-                <li><strong>Models benchmarked</strong>: LR, RF, XGBoost, LightGBM, CatBoost, SVM</li>
-                <li><strong>Stack</strong>: CrewAI, LangGraph, Claude API, scikit-learn, Optuna, Streamlit, Python</li>
-                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/autods" target="_blank">autods</a></li>
+                <li><strong>Domain:</strong> Agentic AI / RAG / LLM Orchestration</li>
+                <li><strong>Stack:</strong> Python, DSPy, Ollama (Llama 3.1 8B), ChromaDB, n8n, FastAPI, Streamlit, Docker</li>
+                <li><strong>Context:</strong> IDS 596 Independent Study — University of Illinois Chicago</li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/municipal-sustainability-ai" target="_blank">View Repository</a></li>
               </ul>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>The Problem</h2>
+              <p>Most AI tutorials stop at "call the LLM API." This independent study asked a harder question: what does the full architectural journey look like — from a single LLM doing text extraction to a production multi-agent system that reasons, self-verifies, and runs on a schedule?</p>
+
+              <h2>What I Built</h2>
+              <ul>
+                <li>Designed and implemented <strong>7 progressive prototypes</strong> showing the full evolution: DSPy typed-signature LLM extraction → RAG with ChromaDB (714 chunks, 768-dim embeddings) → FastAPI service layer → n8n scheduled orchestration → OutputCritic self-verification agent → ReAct agent with force-finish safeguards → production control tower with ML sustainability scoring</li>
+                <li>Expanded corpus iteratively from 6 to <strong>35 documents</strong> across 15 U.S. states and 7 major cities (1.89M characters); ML scoring model improved <strong>63% in LOO MAE</strong> (13.51 → 5.01) as training data grew</li>
+                <li>Final system passed <strong>12/12 production checkpoint checks</strong> — FastAPI, Streamlit dashboard, n8n workflows, RAG retrieval, agent reasoning, and ML scoring all running end-to-end in Docker</li>
+              </ul>
+
+              <h2>Impact</h2>
+              <p>A complete, documented study of how to architect and incrementally evolve an agentic AI system — from prompt engineering fundamentals to production multi-agent orchestration with tool-use, self-verification, and scheduled automation.</p>
             </div>
           </div>
 
@@ -134,5 +143,4 @@
   <script src="assets/js/main.js"></script>
 
 </body>
-
 </html>
