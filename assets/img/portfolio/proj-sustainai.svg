@@ -1,0 +1,62 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- prototype progression ladder -->
+  <text x="60" y="105" fill="#555" font-size="10">P7</text>
+  <text x="60" y="148" fill="#555" font-size="10">P6</text>
+  <text x="60" y="191" fill="#555" font-size="10">P5</text>
+  <text x="60" y="234" fill="#555" font-size="10">P4</text>
+  <text x="60" y="277" fill="#555" font-size="10">P3</text>
+  <text x="60" y="295" fill="#555" font-size="10">P2</text>
+  <text x="60" y="313" fill="#555" font-size="10">P1</text>
+  <!-- bars -->
+  <rect x="85" y="93"  width="370" height="22" rx="3" fill="#18d26e" fill-opacity="0.85"/>
+  <text x="463" y="109" fill="#18d26e" font-size="10">Control Tower · n8n · FastAPI · Streamlit</text>
+  <rect x="85" y="136" width="300" height="22" rx="3" fill="#18d26e" fill-opacity="0.70"/>
+  <text x="393" y="152" fill="#18d26e" font-size="10">ML Scoring (LOO MAE 5.01)</text>
+  <rect x="85" y="179" width="240" height="22" rx="3" fill="#18d26e" fill-opacity="0.60"/>
+  <text x="333" y="195" fill="#18d26e" font-size="10">ReAct Agent + Force-Finish</text>
+  <rect x="85" y="222" width="185" height="22" rx="3" fill="#18d26e" fill-opacity="0.50"/>
+  <text x="278" y="238" fill="#18d26e" font-size="10">OutputCritic Self-Verify</text>
+  <rect x="85" y="265" width="135" height="22" rx="3" fill="#18d26e" fill-opacity="0.40"/>
+  <text x="228" y="281" fill="#18d26e" font-size="10">FastAPI + n8n</text>
+  <rect x="85" y="283" width="90"  height="22" rx="3" fill="#18d26e" fill-opacity="0.30"/>
+  <text x="183" y="299" fill="#18d26e" font-size="10">RAG + ChromaDB</text>
+  <rect x="85" y="301" width="50"  height="22" rx="3" fill="#18d26e" fill-opacity="0.20"/>
+  <text x="143" y="317" fill="#18d26e" font-size="10">DSPy LLM</text>
+  <!-- checkpoints badge -->
+  <rect x="560" y="110" width="200" height="130" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="660" y="136" text-anchor="middle" fill="#18d26e" font-size="13" font-weight="600">Production</text>
+  <text x="660" y="153" text-anchor="middle" fill="#555" font-size="10">12/12 checks passing</text>
+  <line x1="575" y1="160" x2="745" y2="160" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="575" y="178" fill="#888" font-size="11">Corpus</text>
+  <text x="745" y="178" text-anchor="end" fill="#fafafa" font-size="11">35 docs · 1.89M chars</text>
+  <text x="575" y="196" fill="#888" font-size="11">Coverage</text>
+  <text x="745" y="196" text-anchor="end" fill="#fafafa" font-size="11">15 states · 7 cities</text>
+  <text x="575" y="214" fill="#888" font-size="11">MAE improve</text>
+  <text x="745" y="214" text-anchor="end" fill="#18d26e" font-size="11" font-weight="600">63% (13.51→5.01)</text>
+  <text x="575" y="232" fill="#888" font-size="11">Context</text>
+  <text x="745" y="232" text-anchor="end" fill="#fafafa" font-size="11">UIC IDS 596</text>
+  <!-- title -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">SustainAI</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">Single LLM → Multi-Agent · DSPy · RAG · n8n · UIC</text>
+  <!-- tags -->
+  <rect x="185" y="430" width="55" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="212" y="446" text-anchor="middle" fill="#18d26e" font-size="12">DSPy</text>
+  <rect x="253" y="430" width="80" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="293" y="446" text-anchor="middle" fill="#18d26e" font-size="12">ChromaDB</text>
+  <rect x="346" y="430" width="45" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="368" y="446" text-anchor="middle" fill="#18d26e" font-size="12">n8n</text>
+  <rect x="404" y="430" width="60" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="434" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Ollama</text>
+  <rect x="477" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="509" y="446" text-anchor="middle" fill="#18d26e" font-size="12">FastAPI</text>
+  <rect x="555" y="430" width="70" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="590" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Streamlit</text>
+</svg>

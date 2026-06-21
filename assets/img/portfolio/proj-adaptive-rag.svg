@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <!-- subtle grid -->
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <!-- accent line top -->
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- pipeline nodes -->
+  <circle cx="130" cy="250" r="28" fill="none" stroke="#18d26e" stroke-width="2"/>
+  <text x="130" y="255" text-anchor="middle" fill="#18d26e" font-size="11">Query</text>
+  <line x1="158" y1="250" x2="208" y2="250" stroke="#18d26e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="236" cy="250" r="28" fill="none" stroke="#18d26e" stroke-width="2"/>
+  <text x="236" y="255" text-anchor="middle" fill="#18d26e" font-size="10">Retrieve</text>
+  <line x1="264" y1="250" x2="314" y2="250" stroke="#18d26e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <circle cx="342" cy="250" r="28" fill="#18d26e" fill-opacity="0.12" stroke="#18d26e" stroke-width="2"/>
+  <text x="342" y="248" text-anchor="middle" fill="#18d26e" font-size="9">LLM</text>
+  <text x="342" y="260" text-anchor="middle" fill="#18d26e" font-size="9">Judge</text>
+  <!-- branch arrows -->
+  <line x1="370" y1="250" x2="420" y2="210" stroke="#18d26e" stroke-width="1.5"/>
+  <text x="450" y="214" fill="#fafafa" font-size="11">score ≥ 0.6 → Generate</text>
+  <line x1="370" y1="250" x2="420" y2="290" stroke="#aaaaaa" stroke-width="1.5"/>
+  <text x="450" y="294" fill="#888" font-size="11">score &lt; 0.6 → Web Search</text>
+  <!-- title block -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">Adaptive RAG</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">Self-Evaluating Corrective Retrieval Pipeline</text>
+  <!-- tags -->
+  <rect x="220" y="430" width="90" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="265" y="446" text-anchor="middle" fill="#18d26e" font-size="12">LangGraph</text>
+  <rect x="325" y="430" width="90" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="370" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Claude API</text>
+  <rect x="430" y="430" width="90" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="475" y="446" text-anchor="middle" fill="#18d26e" font-size="12">ChromaDB</text>
+  <rect x="535" y="430" width="60" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="565" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Tavily</text>
+</svg>

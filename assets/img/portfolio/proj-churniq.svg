@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- retention curve -->
+  <text x="60" y="115" fill="#555" font-size="10">100%</text>
+  <text x="60" y="175" fill="#555" font-size="10">75%</text>
+  <text x="60" y="235" fill="#555" font-size="10">50%</text>
+  <text x="60" y="295" fill="#555" font-size="10">25%</text>
+  <line x1="90" y1="110" x2="90" y2="300" stroke="#2a2a2a" stroke-width="1"/>
+  <line x1="90" y1="300" x2="530" y2="300" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- 2-year contract curve (stays high) -->
+  <polyline points="90,115 160,118 230,122 300,127 370,132 440,138 510,143" fill="none" stroke="#18d26e" stroke-width="2.5"/>
+  <text x="518" y="147" fill="#18d26e" font-size="11">2-yr contract</text>
+  <!-- month-to-month curve (drops fast) -->
+  <polyline points="90,115 160,160 230,205 300,240 370,265 440,278 510,285" fill="none" stroke="#e74c3c" stroke-width="2.5"/>
+  <text x="518" y="289" fill="#e74c3c" font-size="11">Month-to-month</text>
+  <!-- metrics box -->
+  <rect x="560" y="110" width="200" height="155" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="660" y="136" text-anchor="middle" fill="#18d26e" font-size="13" font-weight="600">Model Results</text>
+  <line x1="575" y1="143" x2="745" y2="143" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="575" y="163" fill="#888" font-size="11">ROC-AUC</text>
+  <text x="745" y="163" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">0.84</text>
+  <text x="575" y="183" fill="#888" font-size="11">5-fold CV AUC</text>
+  <text x="745" y="183" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">0.84 ± 0.01</text>
+  <text x="575" y="203" fill="#888" font-size="11">Churn (M2M)</text>
+  <text x="745" y="203" text-anchor="end" fill="#e74c3c" font-size="11" font-weight="600">42.7%</text>
+  <text x="575" y="223" fill="#888" font-size="11">Churn (2-yr)</text>
+  <text x="745" y="223" text-anchor="end" fill="#18d26e" font-size="11" font-weight="600">2.8%</text>
+  <text x="575" y="243" fill="#888" font-size="11">Revenue at Risk</text>
+  <text x="745" y="243" text-anchor="end" fill="#18d26e" font-size="11" font-weight="600">$1.67M</text>
+  <!-- title -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">ChurnIQ</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">Customer Churn Intelligence · XGBoost + SHAP · FinTech</text>
+  <!-- tags -->
+  <rect x="190" y="430" width="80" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="230" y="446" text-anchor="middle" fill="#18d26e" font-size="12">XGBoost</text>
+  <rect x="283" y="430" width="55" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="310" y="446" text-anchor="middle" fill="#18d26e" font-size="12">SHAP</text>
+  <rect x="351" y="430" width="60" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="381" y="446" text-anchor="middle" fill="#18d26e" font-size="12">React</text>
+  <rect x="424" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="456" y="446" text-anchor="middle" fill="#18d26e" font-size="12">FastAPI</text>
+  <rect x="502" y="430" width="75" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="539" y="446" text-anchor="middle" fill="#18d26e" font-size="12">PostgreSQL</text>
+</svg>

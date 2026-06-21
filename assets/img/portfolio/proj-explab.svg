@@ -1,0 +1,50 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- two distribution curves side by side -->
+  <!-- control distribution -->
+  <path d="M 80,280 Q 130,280 155,200 Q 180,120 205,200 Q 230,280 280,280" fill="#18d26e" fill-opacity="0.12" stroke="#18d26e" stroke-width="2"/>
+  <text x="180" y="300" text-anchor="middle" fill="#18d26e" font-size="11">Control</text>
+  <!-- treatment distribution (shifted right) -->
+  <path d="M 230,280 Q 280,280 310,190 Q 340,100 370,190 Q 400,280 450,280" fill="#3498db" fill-opacity="0.12" stroke="#3498db" stroke-width="2"/>
+  <text x="340" y="300" text-anchor="middle" fill="#3498db" font-size="11">Treatment</text>
+  <!-- significance line -->
+  <line x1="320" y1="120" x2="320" y2="285" stroke="#e74c3c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="325" y="140" fill="#e74c3c" font-size="10">p &lt; 0.05</text>
+  <!-- stat engine box -->
+  <rect x="490" y="105" width="270" height="190" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="625" y="130" text-anchor="middle" fill="#18d26e" font-size="12" font-weight="600">Statistical Engine</text>
+  <line x1="505" y1="137" x2="745" y2="137" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="505" y="157" fill="#888" font-size="11">Power Analysis</text>
+  <text x="755" y="157" text-anchor="end" fill="#ccc" font-size="11">Cohen's h / d</text>
+  <text x="505" y="176" fill="#888" font-size="11">Hypothesis Tests</text>
+  <text x="755" y="176" text-anchor="end" fill="#ccc" font-size="11">z, t, χ², MW-U</text>
+  <text x="505" y="195" fill="#888" font-size="11">Sequential Monitor</text>
+  <text x="755" y="195" text-anchor="end" fill="#ccc" font-size="11">SPRT</text>
+  <text x="505" y="214" fill="#888" font-size="11">Multi-variant</text>
+  <text x="755" y="214" text-anchor="end" fill="#ccc" font-size="11">Holm-Bonferroni</text>
+  <text x="505" y="233" fill="#888" font-size="11">Stack</text>
+  <text x="755" y="233" text-anchor="end" fill="#ccc" font-size="11">FastAPI · React · PG</text>
+  <text x="505" y="252" fill="#888" font-size="11">Deploy</text>
+  <text x="755" y="252" text-anchor="end" fill="#ccc" font-size="11">Docker Compose</text>
+  <!-- title -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">ExpLab</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">A/B Testing Platform · Custom Statistical Engine · Full-Stack</text>
+  <!-- tags -->
+  <rect x="185" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="217" y="446" text-anchor="middle" fill="#18d26e" font-size="12">SciPy</text>
+  <rect x="263" y="430" width="100" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="313" y="446" text-anchor="middle" fill="#18d26e" font-size="12">statsmodels</text>
+  <rect x="376" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="408" y="446" text-anchor="middle" fill="#18d26e" font-size="12">FastAPI</text>
+  <rect x="454" y="430" width="60" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="484" y="446" text-anchor="middle" fill="#18d26e" font-size="12">React</text>
+  <rect x="527" y="430" width="65" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="559" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Docker</text>
+</svg>

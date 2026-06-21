@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg" font-family="'Roboto', 'Segoe UI', sans-serif">
+  <rect width="800" height="500" fill="#0f0f0f"/>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e1e1e" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="500" fill="url(#grid)"/>
+  <rect x="0" y="0" width="800" height="3" fill="#18d26e"/>
+  <!-- attendance bar chart -->
+  <line x1="60" y1="290" x2="520" y2="290" stroke="#2a2a2a" stroke-width="1"/>
+  <!-- bars -->
+  <rect x="75"  y="210" width="35" height="80" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <rect x="125" y="170" width="35" height="120" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <rect x="175" y="240" width="35" height="50" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <rect x="225" y="150" width="35" height="140" fill="#18d26e" fill-opacity="0.8" rx="2"/>
+  <rect x="275" y="230" width="35" height="60" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <rect x="325" y="185" width="35" height="105" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <rect x="375" y="220" width="35" height="70" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <rect x="425" y="165" width="35" height="125" fill="#18d26e" fill-opacity="0.8" rx="2"/>
+  <rect x="475" y="200" width="35" height="90" fill="#18d26e" fill-opacity="0.5" rx="2"/>
+  <!-- posterior curve overlay -->
+  <path d="M 75,270 Q 150,180 225,155 Q 300,170 375,230 Q 430,200 515,250" fill="none" stroke="#18d26e" stroke-width="2" stroke-dasharray="5,3"/>
+  <!-- info box -->
+  <rect x="545" y="110" width="220" height="185" rx="8" fill="#1a1a1a" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="655" y="137" text-anchor="middle" fill="#18d26e" font-size="12" font-weight="600">Bayesian MMM</text>
+  <line x1="560" y1="144" x2="750" y2="144" stroke="#2a2a2a" stroke-width="1"/>
+  <text x="560" y="163" fill="#888" font-size="11">Games modelled</text>
+  <text x="750" y="163" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">11,972</text>
+  <text x="560" y="182" fill="#888" font-size="11">MLB teams</text>
+  <text x="750" y="182" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">30</text>
+  <text x="560" y="201" fill="#888" font-size="11">Seasons</text>
+  <text x="750" y="201" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">2019, 2021–24</text>
+  <text x="560" y="220" fill="#888" font-size="11">Inference</text>
+  <text x="750" y="220" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">NUTS (HMC)</text>
+  <text x="560" y="239" fill="#888" font-size="11">Transforms</text>
+  <text x="750" y="239" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">Adstock + Hill</text>
+  <text x="560" y="258" fill="#888" font-size="11">Dashboard</text>
+  <text x="750" y="258" text-anchor="end" fill="#fafafa" font-size="11" font-weight="600">6-page Streamlit</text>
+  <text x="560" y="277" fill="#888" font-size="11">Data</text>
+  <text x="750" y="277" text-anchor="end" fill="#18d26e" font-size="11" font-weight="600">Real (BB-Ref)</text>
+  <!-- title -->
+  <text x="400" y="370" text-anchor="middle" fill="#ffffff" font-size="32" font-weight="700">FanPulse</text>
+  <text x="400" y="400" text-anchor="middle" fill="#888888" font-size="14">Bayesian MMM · MLB Attendance · PyMC + NUTS</text>
+  <!-- tags -->
+  <rect x="195" y="430" width="55" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="222" y="446" text-anchor="middle" fill="#18d26e" font-size="12">PyMC</text>
+  <rect x="263" y="430" width="55" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="290" y="446" text-anchor="middle" fill="#18d26e" font-size="12">NUTS</text>
+  <rect x="331" y="430" width="80" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="371" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Streamlit</text>
+  <rect x="424" y="430" width="85" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="466" y="446" text-anchor="middle" fill="#18d26e" font-size="12">pytensor</text>
+  <rect x="522" y="430" width="75" height="24" rx="4" fill="#18d26e" fill-opacity="0.15" stroke="#18d26e" stroke-width="1"/>
+  <text x="559" y="446" text-anchor="middle" fill="#18d26e" font-size="12">Bayesian</text>
+</svg>
