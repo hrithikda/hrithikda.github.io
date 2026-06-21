@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>CareSight — Hospital Readmission Prediction</title>
-  <meta name="description" content="CareSight: ML models using XGBoost and neural networks to predict hospital readmission rates, with interactive SHAP-based dashboards for healthcare administrators.">
-  <meta name="keywords" content="machine learning, healthcare, XGBoost, SHAP, hospital readmission, Python, Tableau">
+  <title>Document Intelligence Hub</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <!-- Favicons -->
   <link href="assets/img/favicon3.png" rel="icon">
@@ -35,7 +35,7 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">HDA</h1>
+        <h1 class="sitename">Document Intelligence Hub</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -43,7 +43,7 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -56,22 +56,13 @@
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>CareSight</h1>
-              <p class="mb-0">Hospital Readmission Prediction &nbsp;·&nbsp; Machine Learning &nbsp;·&nbsp; Healthcare Analytics</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="heading"></div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">CareSight</li>
+            <li class="current">Document Intelligence Hub</li>
           </ol>
         </div>
       </nav>
@@ -85,27 +76,37 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
+            <div class="project-detail-header">
+              <div class="project-detail-icon"><i class="bi bi-file-earmark-text"></i></div>
+              <div class="detail-type">LLM &middot; RAG &middot; Full-Stack</div>
+              <h2>Document Intelligence Hub</h2>
+            </div>
 
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": { "delay": 5000 },
-                  "slidesPerView": "auto",
-                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
-                }
-              </script>
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                A fully local RAG (Retrieval-Augmented Generation) system built for business document Q&amp;A.
+                Users upload PDFs, Word documents, or spreadsheets and ask natural-language questions — the system
+                returns precise, cited answers with source attribution, entirely offline using Llama 3.1 8B via Ollama.
+              </p>
 
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/HR1.jpg" alt="CareSight Dashboard">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/HR2.jpg" alt="CareSight SHAP Analysis">
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
+              <h2>What was built</h2>
+              <ul>
+                <li>Hybrid retrieval pipeline combining BM25 sparse search and dense vector search (nomic-embed-text + ChromaDB), fused via Reciprocal Rank Fusion for best-of-both-worlds recall.</li>
+                <li>FastAPI backend with SQLAlchemy and PostgreSQL for document metadata, session management, and query history.</li>
+                <li>React + Vite frontend with Zustand state management — multi-document upload, question interface, and cited answer display.</li>
+                <li>Document parsing layer using PyMuPDF, python-docx, and openpyxl; NLP entity extraction via spaCy.</li>
+                <li>Automated document summarization and cross-document comparison endpoints.</li>
+                <li>Full Docker Compose deployment — single command spins up the LLM server, backend, frontend, and database.</li>
+                <li>Security-conscious dependency management (axios pinned to avoid compromised release).</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Most RAG demos rely on OpenAI or cloud APIs, exposing private documents. This system runs entirely
+                on-device — practical for legal, healthcare, or enterprise use cases where data cannot leave the network.
+                Hybrid retrieval with RRF meaningfully outperforms either BM25 or dense search alone on long-form documents.
+              </p>
             </div>
           </div>
 
@@ -113,25 +114,10 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Domain:</strong> Healthcare / Machine Learning</li>
-                <li><strong>Stack:</strong> Python, XGBoost, Neural Networks, SHAP, Tableau</li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/hrithikda/Hospital-Readmission-Prediction" target="_blank">View Repository</a></li>
+                <li><strong>Category</strong>: LLM / RAG System</li>
+                <li><strong>Stack</strong>: Llama 3.1 8B, Ollama, ChromaDB, FastAPI, React, PostgreSQL, spaCy, Docker</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/doc-intelligence-hub" target="_blank">doc-intelligence-hub</a></li>
               </ul>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>The Problem</h2>
-              <p>Hospitals face CMS penalties when patients are readmitted within 30 days — a costly and largely preventable outcome. Administrators needed a data-driven way to identify high-risk patients before discharge.</p>
-
-              <h2>What I Built</h2>
-              <ul>
-                <li>Trained regression, XGBoost, and neural network models to predict excess readmission rates with measurable accuracy</li>
-                <li>Built interactive dashboards with SHAP-based feature importance to explain model decisions to non-technical stakeholders</li>
-                <li>Delivered visualizations on discharge volumes, predicted vs. expected readmission trends, and key clinical factors</li>
-              </ul>
-
-              <h2>Impact</h2>
-              <p>Enabled healthcare administrators to pinpoint quality gaps, redirect clinical resources, and reduce potential penalty exposure through actionable, interpretable predictions.</p>
             </div>
           </div>
 

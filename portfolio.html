@@ -56,16 +56,7 @@
 
     <!-- Page Title -->
     <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Projects</h1>
-              <p class="mb-0">End-to-end work across machine learning, data engineering, and AI — from raw data to real outcomes.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="heading"></div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
@@ -83,100 +74,476 @@
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
+          <!-- Featured row -->
+          <div class="row gy-2 mb-2" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-12">
+              <p class="portfolio-section-label">Featured</p>
+            </div>
+          </div>
+
+          <div class="row gy-4 mb-5 isotope-container" data-aos="fade-up" data-aos-delay="150">
+
+            <!-- Featured 1: Municipal Sustainability AI -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card project-card--featured h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-diagram-3 project-icon"></i>
+                  <span class="project-type">Multi-Agent AI</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Municipal Sustainability AI</h4>
+                  <p>Adopted by local governments to benchmark climate investments. 63% MAE reduction on scoring model, 42% retrieval precision gain across 7 prototype generations — 4-stage multi-LLM pipeline with DSPy, BM25 + dense retrieval, and RAGAS gating. UIC CLEAN Initiative.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">DSPy</span>
+                    <span class="tech-tag">RAGAS</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">MLflow</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/municipal-sustainability-ai" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details7.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 2: Customer Churn -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card project-card--featured h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-graph-down-arrow project-icon"></i>
+                  <span class="project-type">Full-Stack ML</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Customer Churn Analytics Platform</h4>
+                  <p>$2.1M in annual revenue at risk quantified — changed the product roadmap. XGBoost + LightGBM at 0.84 ROC-AUC across 15K customer segments, 40+ behavioral features, SHAP explainability. Mirrors the production system built at PlanSource.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">XGBoost</span>
+                    <span class="tech-tag">SHAP</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/churn-analytics-platform" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details2.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Featured 3: Intelligent Ops -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card project-card--featured h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-cpu project-icon"></i>
+                  <span class="project-type">MLOps &middot; AIOps</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Intelligent Operations Command Center</h4>
+                  <p>F1 84.9%, FPR 0.15% on anomaly detection — ensemble Isolation Forest + PyTorch autoencoder. LightGBM forecasting at 14.84% MAPE (35.7% over baseline). RAG-powered root cause analysis via Claude API. Airflow + MLflow + FastAPI end-to-end.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">LightGBM</span>
+                    <span class="tech-tag">Claude API</span>
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">MLflow</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/intelligent-operations-command-center" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details8.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div><!-- End Featured Row -->
+
+          <!-- All Projects -->
+          <div class="row gy-2 mb-2" data-aos="fade-up">
+            <div class="col-12">
+              <p class="portfolio-section-label">All Projects</p>
+            </div>
+          </div>
+
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
-            <!-- CareSight -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/HR1.jpg" class="img-fluid" alt="CareSight Hospital Readmission Prediction">
-                <div class="portfolio-info">
-                  <h4>CareSight</h4>
-                  <p>Hospital Readmission Prediction</p>
-                  <div class="portfolio-tags">
-                    <span>Python</span><span>XGBoost</span><span>SHAP</span><span>Tableau</span>
+            <!-- Project 1: Document Intelligence Hub -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-file-earmark-text project-icon"></i>
+                  <span class="project-type">LLM &middot; RAG</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Document Intelligence Hub</h4>
+                  <p>Eliminates the need to manually search documents — ask a question, get a cited answer in seconds. Hybrid BM25 + dense retrieval with Reciprocal Rank Fusion over PDFs, Word docs, and spreadsheets. Runs fully offline, no cloud APIs.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Llama 3.1 8B</span>
+                    <span class="tech-tag">Ollama</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">spaCy</span>
+                    <span class="tech-tag">Docker</span>
                   </div>
-                  <a href="assets/img/portfolio/HR1.jpg" title="CareSight" data-gallery="portfolio-gallery-ml" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details1.html" title="View Project" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/doc-intelligence-hub" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details1.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <!-- QuantifyAI -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/Sales.jpg" class="img-fluid" alt="QuantifyAI Sales Dashboard">
-                <div class="portfolio-info">
-                  <h4>QuantifyAI</h4>
-                  <p>Quantitative Alpha Research Platform</p>
-                  <div class="portfolio-tags">
-                    <span>Python</span><span>Pandas</span><span>Power BI</span><span>SQL</span>
+            <!-- Project 2: Customer Churn Analytics Platform -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-graph-down-arrow project-icon"></i>
+                  <span class="project-type">Full-Stack ML</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Customer Churn Analytics Platform</h4>
+                  <p>End-to-end ML system for churn prediction — mirrors the production system that quantified $2.1M in annual revenue at risk across 15K customer segments at PlanSource. XGBoost with SHAP explainability, served via FastAPI, across five React dashboard views.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">XGBoost</span>
+                    <span class="tech-tag">SHAP</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                    <span class="tech-tag">Recharts</span>
                   </div>
-                  <a href="assets/img/portfolio/Sales.jpg" title="QuantifyAI" data-gallery="portfolio-gallery-data" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details2.html" title="View Project" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/churn-analytics-platform" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details2.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <!-- CareerSpace -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/careerspace1.jpg" class="img-fluid" alt="CareerSpace AI Career Platform">
-                <div class="portfolio-info">
-                  <h4>CareerSpace</h4>
-                  <p>AI-Powered Career Intelligence Platform</p>
-                  <div class="portfolio-tags">
-                    <span>Python</span><span>ML</span><span>NLP</span><span>Flask</span>
+            <!-- Project 3: A/B Testing Platform -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-bar-chart-steps project-icon"></i>
+                  <span class="project-type">Statistical Engineering</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>A/B Testing &amp; Experimentation Platform</h4>
+                  <p>Full-stack experimentation engine that cut analysis time from 3 days to 15 minutes. Supports power analysis, Welch t-tests, SPRT sequential testing, and Holm-Bonferroni correction for multi-variant experiments — built for statistical rigor at scale.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">SciPy</span>
+                    <span class="tech-tag">statsmodels</span>
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
                   </div>
-                  <a href="assets/img/portfolio/careerspace1.jpg" title="CareerSpace" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details3.html" title="View Project" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/ab-test-platform" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details3.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <!-- Spotify -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ml">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/spotify1.jpg" class="img-fluid" alt="Spotify Stream Prediction">
-                <div class="portfolio-info">
-                  <h4>Spotify Stream Prediction</h4>
-                  <p>ML Regression for Music Popularity</p>
-                  <div class="portfolio-tags">
-                    <span>Python</span><span>scikit-learn</span><span>Regression</span>
+            <!-- Project 4: CareSight -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-heart-pulse project-icon"></i>
+                  <span class="project-type">Healthcare ML</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>CareSight &mdash; Hospital Readmission Prediction</h4>
+                  <p>Predicts excess readmission ratios across 18,774 CMS hospital records covering six HRRP conditions. XGBoost pipeline with SHAP waterfall explanations and a three-tab Streamlit dashboard — R&sup2; 0.948, F1 0.972 on ERR classification.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">XGBoost</span>
+                    <span class="tech-tag">SHAP</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Scikit-learn</span>
+                    <span class="tech-tag">Pandas</span>
                   </div>
-                  <a href="assets/img/portfolio/spotify1.jpg" title="Spotify Stream Prediction" data-gallery="portfolio-gallery-ml" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details4.html" title="View Project" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/Hospital-Readmission-Prediction" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details4.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <!-- Rooted in Dignity -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-data">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/rooted.jpg" class="img-fluid" alt="Rooted in Dignity Website Audit">
-                <div class="portfolio-info">
-                  <h4>Rooted In Dignity</h4>
-                  <p>Website Auditing &amp; Social Media Strategy</p>
-                  <div class="portfolio-tags">
-                    <span>SEO</span><span>Analytics</span><span>Strategy</span>
+            <!-- Project 5: QuantifyAI -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-currency-exchange project-icon"></i>
+                  <span class="project-type">Quant Finance</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>QuantifyAI &mdash; Quant Alpha Research</h4>
+                  <p>Turns raw price data into testable alpha — RSI, MACD, and Bollinger Band signals feed a Random Forest classifier for buy/sell decisions, then Backtrader runs the full portfolio simulation. Live data to backtest result in one pipeline.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">Backtrader</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">yfinance</span>
+                    <span class="tech-tag">pandas</span>
                   </div>
-                  <a href="assets/img/portfolio/rooted.jpg" title="Rooted In Dignity" data-gallery="portfolio-gallery-data" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details5.html" title="View Project" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/quant_alpha_research" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details5.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->
 
-            <!-- College Prediction -->
-            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-ai">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/portfolio/tsec0.png" class="img-fluid" alt="College Prediction using SOP and LOR">
-                <div class="portfolio-info">
-                  <h4>College Admission Predictor</h4>
-                  <p>NLP + K-Means on SOP &amp; LOR Documents</p>
-                  <div class="portfolio-tags">
-                    <span>NLP</span><span>K-Means</span><span>Python</span>
+            <!-- Project 6: Intelligent Operations Command Center -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-cpu project-icon"></i>
+                  <span class="project-type">MLOps &middot; AIOps</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Intelligent Operations Command Center</h4>
+                  <p>End-to-end AIOps platform: ensemble anomaly detection (Isolation Forest + autoencoder, F1 84.9%), LightGBM capacity forecasting, and RAG-powered root cause analysis via Claude API — orchestrated with Airflow, tracked with MLflow, deployed via Docker.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">PyTorch</span>
+                    <span class="tech-tag">LightGBM</span>
+                    <span class="tech-tag">Claude API</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">Airflow</span>
+                    <span class="tech-tag">MLflow</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Docker</span>
                   </div>
-                  <a href="assets/img/portfolio/tsec0.png" title="College Admission Predictor" data-gallery="portfolio-gallery-ai" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                  <a href="portfolio-details6.html" title="View Project" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/intelligent-operations-command-center" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details8.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 7: Municipal Sustainability AI -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-diagram-3 project-icon"></i>
+                  <span class="project-type">Multi-Agent AI</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>Municipal Sustainability AI</h4>
+                  <p>Progressive AI architecture from single LLMs to agentic workflows, built as an independent study (IDS 596 at UIC). Scrapes 41 climate targets, extracts structured data with DSPy, indexes 714 document chunks for semantic search, and routes queries through specialist LLM roles with self-verification.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">DSPy</span>
+                    <span class="tech-tag">Llama 3.1 8B</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">n8n</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/municipal-sustainability-ai" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details7.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 8: FanPulse -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-activity project-icon"></i>
+                  <span class="project-type">Bayesian Modeling</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>FanPulse &mdash; Bayesian Marketing Mix Model</h4>
+                  <p>Bayesian MMM analyzing 11,972 MLB home games across five seasons — R&sup2; 0.81, MAPE 8.3%, $3.2M projected revenue impact. Models geometric adstock, Hill saturation curves, and hierarchical pooling across 30 teams. SLSQP budget optimization surfaced in a six-page Streamlit dashboard.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">PyMC</span>
+                    <span class="tech-tag">PyTensor</span>
+                    <span class="tech-tag">ArviZ</span>
+                    <span class="tech-tag">SciPy</span>
+                    <span class="tech-tag">pybaseball</span>
+                    <span class="tech-tag">Streamlit</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/fanpulse" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details6.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 9: AI Financial Analyst Agent -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-bank project-icon"></i>
+                  <span class="project-type">Agentic AI &middot; RAG</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>AI Financial Analyst Agent</h4>
+                  <p>Compresses hours of 10-K/10-Q reading into a structured research brief — specialist agents for extraction, ratio analysis, sentiment, and synthesis. RAG over SEC filings with ChromaDB, cited sources in every output.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">LangGraph</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">ChromaDB</span>
+                    <span class="tech-tag">Claude API</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Python</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/ai-financial-analyst" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details9.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 10: LLM Observability Platform -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-shield-check project-icon"></i>
+                  <span class="project-type">LLM Evaluation</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>LLM Observability Platform</h4>
+                  <p>Raised retrieval precision 42% across 7 prototype generations by gating every release on 12 RAGAS checkpoints. RAGAS scoring, LLM-as-judge, golden test set versioning, and drift detection — the same eval infrastructure used in the UIC CLEAN research.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">RAGAS</span>
+                    <span class="tech-tag">MLflow</span>
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/llm-observability" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details10.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 11: dbt Semantic Layer -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-layers project-icon"></i>
+                  <span class="project-type">Data Engineering</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>dbt Semantic Layer &amp; Analytics Engineering</h4>
+                  <p>End-to-end analytics engineering stack on Snowflake — Fivetran ingestion, dbt transformations with 98%+ test coverage, dimensional modeling, and a semantic layer exposing governed metrics to BI tools. Includes CI/CD pipeline with dbt Cloud and GitHub Actions.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">dbt</span>
+                    <span class="tech-tag">Snowflake</span>
+                    <span class="tech-tag">Fivetran</span>
+                    <span class="tech-tag">GitHub Actions</span>
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Looker</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/analytics-engineering" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details11.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 12: SQL Co-Pilot -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-terminal project-icon"></i>
+                  <span class="project-type">NLP &middot; LLM</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>SQL Co-Pilot</h4>
+                  <p>Ask a plain-English question, get a validated, executable SQL query — handles joins, window functions, and nested subqueries. Schema injection + few-shot selection + self-correction loop cuts hallucinated columns to near zero.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">LangChain</span>
+                    <span class="tech-tag">Claude API</span>
+                    <span class="tech-tag">PostgreSQL</span>
+                    <span class="tech-tag">FastAPI</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Python</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/sql-copilot" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details12.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div><!-- End Portfolio Item -->
+
+            <!-- Project 13: AutoDS -->
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item">
+              <div class="project-card h-100">
+                <div class="project-card-header">
+                  <i class="bi bi-robot project-icon"></i>
+                  <span class="project-type">Multi-Agent AI</span>
+                </div>
+                <div class="project-card-body">
+                  <h4>AutoDS — Autonomous Data Science Agent</h4>
+                  <p>Drop in a CSV and a target column — get back a tuned model and a research-grade report. Five specialist agents (EDA → feature engineering → model selection → Optuna tuning → report) with full reasoning exposed at every step.</p>
+                  <div class="tech-tags">
+                    <span class="tech-tag">CrewAI</span>
+                    <span class="tech-tag">LangGraph</span>
+                    <span class="tech-tag">Claude API</span>
+                    <span class="tech-tag">scikit-learn</span>
+                    <span class="tech-tag">Streamlit</span>
+                    <span class="tech-tag">Python</span>
+                  </div>
+                </div>
+                <div class="project-card-footer">
+                  <a href="https://github.com/hrithikda/autods" target="_blank" class="btn-github">
+                    <i class="bi bi-github"></i> GitHub
+                  </a>
+                  <a href="portfolio-details13.html" class="btn-details">Details <i class="bi bi-arrow-right"></i></a>
                 </div>
               </div>
             </div><!-- End Portfolio Item -->

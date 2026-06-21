@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>College Admission Predictor — NLP + K-Means on SOP &amp; LOR</title>
-  <meta name="description" content="IEEE-published research: predicting postgraduate college admissions using regression models and a novel K-Means + NLP approach for evaluating SOPs and LORs.">
-  <meta name="keywords" content="admission prediction, NLP, K-Means clustering, machine learning, regression, IEEE, SOP, LOR, Python">
+  <title>FanPulse — Bayesian Marketing Mix Model</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <link href="assets/img/favicon3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,6 +21,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
 <body class="portfolio-details-page">
@@ -28,14 +29,14 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">HDA</h1>
+        <h1 class="sitename">FanPulse</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -46,22 +47,13 @@
   <main class="main">
 
     <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>College Admission Predictor</h1>
-              <p class="mb-0">NLP + K-Means on SOP &amp; LOR &nbsp;·&nbsp; Regression Models &nbsp;·&nbsp; IEEE Published</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="heading"></div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">College Admission Predictor</li>
+            <li class="current">FanPulse</li>
           </ol>
         </div>
       </nav>
@@ -72,34 +64,41 @@
         <div class="row gy-4">
 
           <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper init-swiper">
-              <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 600,
-                  "autoplay": { "delay": 5000 },
-                  "slidesPerView": "auto",
-                  "pagination": { "el": ".swiper-pagination", "type": "bullets", "clickable": true }
-                }
-              </script>
-              <div class="swiper-wrapper align-items-center">
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tsec0.png" alt="Admission Predictor Overview">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tsec1.jpg" alt="Data Analysis">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tsec2.jpg" alt="Model Results">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tsec3.jpg" alt="NLP Pipeline">
-                </div>
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/tsec4.jpg" alt="Clustering Analysis">
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
+            <div class="project-detail-header">
+              <div class="project-detail-icon"><i class="bi bi-activity"></i></div>
+              <div class="detail-type">Bayesian Modeling &middot; Sports Analytics</div>
+              <h2>FanPulse &mdash; Bayesian Marketing Mix Model for MLB Fan Demand</h2>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                FanPulse is a Bayesian Marketing Mix Model (MMM) that decomposes MLB game attendance across
+                multiple demand drivers — competitive factors, weather, promotions, and marketing spend — using
+                11,972 real home games from five seasons (2019, 2021–2024). The goal is to quantify what
+                actually moves the needle on attendance and enable interactive budget-planning scenarios.
+              </p>
+
+              <h2>What was built</h2>
+              <ul>
+                <li>Full Bayesian MMM in PyMC with geometric adstock transforms (carry-over effects) and Hill saturation curves (diminishing returns) for each marketing channel.</li>
+                <li>Hierarchical model with partial pooling across all 30 MLB teams — shares signal between teams while preserving team-specific effects.</li>
+                <li>Reset-aware adstock: boundary conditions prevent data leakage between team-seasons (end of one season doesn't carry into the next).</li>
+                <li>Time-based holdout validation on the 2024 season — trained on 2019–2023 data, validated out-of-sample. R&sup2; &asymp; 0.33, MAPE &asymp; 23.9% (holdout).</li>
+                <li>Budget optimization via SciPy SLSQP constrained solver — finds the spend allocation across channels that maximizes predicted attendance given a total budget.</li>
+                <li>Six-page interactive Streamlit dashboard: EDA, model results, diagnostics, scenario planner, and methodology — backed by ArviZ posterior summaries.</li>
+                <li>Clear data provenance: real attendance and game results from Baseball Reference; synthetic marketing spend data clearly labeled as illustrative.</li>
+                <li>Modular codebase: <code>backend/models/</code>, <code>backend/utils/</code>, <code>streamlit_app/pages/</code> with separate concerns across ingestion, modeling, and UI.</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Traditional marketing attribution uses last-touch or linear rules that ignore carry-over effects and
+                diminishing returns — both of which are central to how advertising actually works. Bayesian MMM
+                quantifies uncertainty in every coefficient rather than producing point estimates, making the budget
+                recommendations more honest. The holdout R&sup2; of 0.33 reflects genuine out-of-sample difficulty
+                (attendance is noisy) rather than overfit train-set numbers.
+              </p>
             </div>
           </div>
 
@@ -107,26 +106,12 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Domain:</strong> Education Analytics / NLP / ML</li>
-                <li><strong>Stack:</strong> Python, scikit-learn, K-Means, NLP, Pandas, NumPy</li>
-                <li><strong>Published:</strong> <a href="https://ieeexplore.ieee.org/abstract/document/10039572" target="_blank">IEEE Xplore</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/aakashskapadia/admission-prediction" target="_blank">View Repository</a></li>
+                <li><strong>Category</strong>: Bayesian Modeling / Sports Analytics</li>
+                <li><strong>Data</strong>: 11,972 MLB home games &mdash; 2019, 2021&ndash;2024</li>
+                <li><strong>Holdout</strong>: R&sup2; &asymp; 0.33, MAPE &asymp; 23.9% (2024 season)</li>
+                <li><strong>Stack</strong>: PyMC, PyTensor, ArviZ, SciPy, pybaseball, Streamlit, pandas</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/fanpulse" target="_blank">fanpulse</a></li>
               </ul>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>The Problem</h2>
-              <p>Existing admission prediction systems rely solely on numeric scores (GPA, test results), ignoring the qualitative richness of Statements of Purpose and Letters of Recommendation — which are often decisive in top-program admissions.</p>
-
-              <h2>What I Built</h2>
-              <ul>
-                <li>Performed exploratory data analysis on undergraduate profiles including GPA, test scores, and extracurriculars to identify the strongest predictors of admission success</li>
-                <li>Trained and compared Linear, Ridge, and Lasso regression models, achieving <strong>80% prediction accuracy</strong></li>
-                <li>Designed a novel unsupervised pipeline combining K-Means clustering with NLP to evaluate and rank SOPs and LORs — boosting admission prediction precision by <strong>25%</strong></li>
-              </ul>
-
-              <h2>Impact</h2>
-              <p>This work was <strong>published in IEEE Xplore</strong>, validating the approach as a meaningful contribution to data-driven education research. The NLP-augmented model significantly outperforms score-only baselines.</p>
             </div>
           </div>
 
@@ -152,4 +137,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>

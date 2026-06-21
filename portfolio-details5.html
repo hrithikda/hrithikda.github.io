@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Rooted In Dignity — Website Audit &amp; Social Media Strategy</title>
-  <meta name="description" content="Website audit and data-driven social media strategy for Rooted In Dignity using WordPress, zero-shot classification NLP, and competitor analysis.">
-  <meta name="keywords" content="website audit, social media strategy, NLP, zero-shot classification, WordPress, digital marketing">
+  <title>QuantifyAI — Quant Alpha Research</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
 
   <link href="assets/img/favicon3.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -21,6 +21,7 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
+
 </head>
 
 <body class="portfolio-details-page">
@@ -28,14 +29,14 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <h1 class="sitename">HDA</h1>
+        <h1 class="sitename">QuantifyAI</h1>
       </a>
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="resume.html">Resume</a></li>
-          <li><a href="portfolio.html" class="active">Projects</a></li>
+          <li><a href="portfolio.html">Projects</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -46,22 +47,13 @@
   <main class="main">
 
     <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Rooted In Dignity</h1>
-              <p class="mb-0">Website Auditing &nbsp;·&nbsp; Social Media Strategy &nbsp;·&nbsp; NLP Analysis</p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <div class="heading"></div>
       <nav class="breadcrumbs">
         <div class="container">
           <ol>
             <li><a href="index.html">Home</a></li>
             <li><a href="portfolio.html">Projects</a></li>
-            <li class="current">Rooted In Dignity</li>
+            <li class="current">QuantifyAI</li>
           </ol>
         </div>
       </nav>
@@ -83,10 +75,37 @@
               </script>
               <div class="swiper-wrapper align-items-center">
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/rooted.jpg" alt="Rooted In Dignity Website">
+                  <img src="assets/img/portfolio/Sales.jpg" alt="QuantifyAI Dashboard">
                 </div>
               </div>
               <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
+              <h2>Overview</h2>
+              <p>
+                QuantifyAI is an ML-driven backtesting platform for equity trading strategies. It pulls live market
+                data, computes classic technical indicators, trains a classifier to generate buy/sell signals,
+                and runs portfolio simulations — all surfaced through an interactive Streamlit dashboard.
+              </p>
+
+              <h2>What was built</h2>
+              <ul>
+                <li>Live data ingestion via <code>yfinance</code> — any ticker, any lookback window.</li>
+                <li>Feature engineering pipeline computing RSI, MACD, and Bollinger Bands from raw OHLCV data.</li>
+                <li>Random Forest classifier trained on technical features to produce buy/sell/hold signals; evaluated with ROC-AUC.</li>
+                <li>Backtrader integration for portfolio simulation — applies model signals to historical data and tracks portfolio value over time.</li>
+                <li>Streamlit dashboard for real-time analytics: model metrics, signal overlays, and backtest equity curves.</li>
+                <li><code>requirements.txt</code> and clean project layout for straightforward local setup.</li>
+              </ul>
+
+              <h2>Why it matters</h2>
+              <p>
+                Combining ML signal generation with a proper backtesting framework (rather than simple forward simulation)
+                is a meaningful step toward realistic strategy evaluation. Backtrader handles slippage, position sizing,
+                and trade execution mechanics that naive simulations ignore — making the results more honest about
+                what the strategy would have actually returned.
+              </p>
             </div>
           </div>
 
@@ -94,25 +113,11 @@
             <div class="portfolio-info" data-aos="fade-up" data-aos-delay="200">
               <h3>Project Info</h3>
               <ul>
-                <li><strong>Domain:</strong> Digital Strategy / NLP</li>
-                <li><strong>Stack:</strong> WordPress, Python, Zero-Shot Classification, NLP</li>
-                <li><strong>Client:</strong> <a href="https://rootedindignity.com/" target="_blank">rootedindignity.com</a></li>
+                <li><strong>Category</strong>: Quant Finance / ML</li>
+                <li><strong>Signals</strong>: RSI, MACD, Bollinger Bands</li>
+                <li><strong>Stack</strong>: Python, scikit-learn, Backtrader, Streamlit, yfinance, pandas</li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/hrithikda/quant_alpha_research" target="_blank">quant_alpha_research</a></li>
               </ul>
-            </div>
-
-            <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
-              <h2>The Problem</h2>
-              <p>Rooted In Dignity, a nonprofit, had a website with poor UX and a social media presence that wasn't converting — lacking data-driven insight into what messaging resonated with their audience.</p>
-
-              <h2>What I Built</h2>
-              <ul>
-                <li>Led a team of five to conduct a comprehensive WordPress website audit — improving structure, accessibility, and alignment with nonprofit industry standards</li>
-                <li>Applied zero-shot NLP classification to analyse Rooted In Dignity's social media posts and competitor profiles, surfacing high-performing content themes</li>
-                <li>Delivered a structured strategy report with actionable recommendations to increase engagement and brand visibility</li>
-              </ul>
-
-              <h2>Impact</h2>
-              <p>Provided the organisation with a clear content roadmap grounded in competitive benchmarking and NLP-driven insight — enabling data-informed decisions without a dedicated analytics team.</p>
             </div>
           </div>
 
@@ -122,6 +127,7 @@
 
   </main>
 
+  <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
   <div id="preloader"></div>
 
@@ -138,4 +144,5 @@
   <script src="assets/js/main.js"></script>
 
 </body>
+
 </html>
